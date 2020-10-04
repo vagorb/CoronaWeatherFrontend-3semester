@@ -1,0 +1,101 @@
+<!--<div class="appSearch">-->
+<!--  <input #myInput type="text" class="inputClass">-->
+<!--  <button (click)="onClick(myInput.value)">-->
+<!--    <div class="magnifyingGlass">-->
+<!--      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
+<!--    </div>-->
+<!--  </button>-->
+<!--</div>-->
+
+<!--<div>-->
+<!--<div *ngIf="show" class="searchBarResultDiv">-->
+
+<!--  <div class="resultNow">-->
+<!--    <button class="resultNowButton"> Weather now </button>-->
+<!--&lt;!&ndash;    <input type="button" class="resultNowButton" >&ndash;&gt;-->
+
+<!--  </div>-->
+
+<!--  <div class="resultSevenDaysLater">-->
+<!--    <button class="resultSevenDaysLaterButton" > Weather in 7 days </button>-->
+<!--&lt;!&ndash;    <input type="radio" checked class="resultSevenDaysLaterButton" name="WeatherIn7Days">&ndash;&gt;-->
+<!--  </div>-->
+
+<!--  <div class="resultCityName">-->
+<!--    <p>{{cityName}}</p>-->
+<!--  </div>-->
+
+<!--  <div class="weatherTypeImage">-->
+<!--    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">-->
+<!--  </div>-->
+
+<!--  <div class="weatherInfoContainer">-->
+<!--  </div>-->
+
+<!--</div>-->
+<!--</div>-->
+
+
+<!--div class="appSearch">-->
+<!--<input #myInput type="text" class="inputClass">-->
+<!--<button (click)="onClick(myInput.value)">-->
+<!--  <div class="magnifyingGlass">-->
+<!--    <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
+<!--  </div>-->
+<!--</button>-->
+<!--</div>-->
+
+
+<div class="search">
+  <input #myInput type="text" class="inputClass">
+  <button (click)="onClick(myInput.value)">
+    <div class="magnifyingGlass">
+      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">
+    </div>
+  </button>
+</div>
+
+
+
+<div *ngIf="show" class="searchResultContainer">
+  <div class="resultNow">
+  <button class="resultNowButton"> Weather now </button>
+  </div>
+  <div class="result7DaysLater">
+    <button class="result7DaysLatterButton"> Weather in 7 days </button>
+  </div>
+  <div class="resultCityName">
+    <p>{{cityName}}</p>
+  </div>
+  <div class="weatherTypeImage">
+    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">
+  </div>
+  <div class="weatherInfoContainer"></div>
+</div>
+<!--<div>-->
+<!--<div *ngIf="show" class="searchBarResultDiv">-->
+
+<!--  <div class="resultNow">-->
+<!--    <button class="resultNowButton"> Weather now </button>-->
+<!--&lt;!&ndash;    <input type="button" class="resultNowButton" >&ndash;&gt;-->
+
+<!--  </div>-->
+
+<!--  <div class="resultSevenDaysLater">-->
+<!--    <button class="resultSevenDaysLaterButton" > Weather in 7 days </button>-->
+<!--&lt;!&ndash;    <input type="radio" checked class="resultSevenDaysLaterButton" name="WeatherIn7Days">&ndash;&gt;-->
+<!--  </div>-->
+
+<!--  <div class="resultCityName">-->
+<!--    <p>{{cityName}}</p>-->
+<!--  </div>-->
+
+<!--  <div class="weatherTypeImage">-->
+<!--    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">-->
+<!--  </div>-->
+
+<!--  <div class="weatherInfoContainer">-->
+<!--  </div>-->
+
+<!--</div>-->
+<!--</div>-->

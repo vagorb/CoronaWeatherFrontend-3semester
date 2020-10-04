@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
-  template: `<div class="appSearch">
-    <input #myInput type="text" class="inputClass">
-    <button (click)="onClick(myInput.value)">
-      <div class="magnifyingGlass">
-      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">
-    </div>
-    </button>
-  </div>`,
+  templateUrl: `search-bar.html`,
   styleUrls: ['./search-bar.css']
 })
 export class SearchBarComponent implements OnInit {
+  show: boolean = false;
+  cityName: string = "";
+  weatherImage: string = "";
 
   onClick(value) {
-    console.log(value)
+    this.show = true;
+    console.log(value);
+    this.cityName = value;
+    this.weatherImage = "sunny";
   }
   constructor() { }
 
