@@ -117,3 +117,16 @@ a {
   margin: 25px;
   font-size: 40px;
 }
+
+.logo {
+  text-align: center;
+  width: 38%;
+  /*height: 85%;*/
+}
+
+.imgDiv {
+  /*margin-left: 40%;*/
+  margin-right: 40%;
+  width: 20%;
+  height: auto;
+}

@@ -1,0 +1,41 @@
+/*.name {*/
+/*  height: 100px;*/
+/*  width: 100px;*/
+/*  background-color: yellow;*/
+/*}*/
+
+
+/*.contactContainer {*/
+/*  margin-right: 35%;*/
+/*}*/
+
+/*.contactInfo {*/
+/*  padding: 10%;*/
+/*}*/
+
+.contactContainer {
+  background-color: lightgoldenrodyellow;
+}
+
+.contactInfo {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.contactInfoAt {
+  padding-bottom: 5%;
+}
+.contactInfoPhone {
+  padding-bottom: 5%;
+}
+/*.contactInfo {*/
+/*  background-color: lightgray;*/
+/*  !*background-color: lightgray;*!*/
+/*}*/
+.atSign {
+  width: 2.5%;
+  height: 2.5%;
+}
+.contactPhone {
+  width: 2.5%;
+  height: 2.5%;
+}

@@ -29,7 +29,7 @@
 
 
 .search {
-
+  margin-right: 30%;
 }
 
 .inputClass {
@@ -67,23 +67,68 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1%;
+  height: 750px;
 }
 
 .resultNow {
-  text-align: center;
+  display: inline-block;
+  /*width: 50%;*/
+  margin-left: 20%;
+  /*display: inline-block;*/
+  /*text-align: right;*/
+  /*margin: 0;*/
+  /*margin-left: 40%;*/
+  /*margin-right: 40%;*/
+  /*margin: 0;*/
+  /*width: 25%;*/
+  /*min-width: 25%;*/
+  /*max-width: 25%;*/
   /*width: 25%;*/
   /*margin-left: 40%;*/
 }
 
 .resultNowButton {
+  /*display: inline-block;*/
   text-align: center;
   height: 50px;
   width: 200px;
 }
 
 .result7DaysLater {
+  display: inline-block;
+  margin-left: 20%;
   /*text-align: ;*/
-  position: relative;
-  top: 20%;
-  left: 65%;
+  /*position: relative;*/
+  /*top: 20%;*/
+  /*left: 65%;*/
+  /*position: relative;*/
+  /*left: 75%;*/
+  /*!*top*!*/
+  /*top: 100%*/
+}
+
+.result7DaysLatterButton {
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  /*height: 50px;*/
+  /*width: 200px;*/
+}
+
+
+/*.resultButtonContainer {*/
+/*  width: auto;*/
+/*}*/
+
+/*.resultButtonContainer {*/
+/*  width: 50%;*/
+/*}*/
+
+.resultCityName {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.weatherTypeImage {
+  text-align: right;
 }
