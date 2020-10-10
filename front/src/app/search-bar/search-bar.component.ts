@@ -17,20 +17,14 @@ export class SearchBarComponent implements OnInit {
   weatherImage: string = "";
   subscription = new Subscription();
   forecastInfo: any = [{}];
-  xhr = new XMLHttpRequest();
+  // xhr = new XMLHttpRequest();
 
 
 
   url = "http://localhost:8080/api/Forecast/";
   onClick(value) {
-    // this.show = true;
-    // // const city = this.route.snapshot.paramMap.get("{id}");
-    // // this.cityName = city;
-    // console.log(value);
-    // // this.cityName = value;
-    // // this.weatherImage = "sunny";
     this.show = true;
-    this.subscription.add(this.hs.getWeatherForecast(this.url + value).subscribe(res => {console.log("Test if works");
+    this.subscription.add(this.hs.getWeatherForecasts(this.url + value).subscribe(res => {console.log("Test if works");
       this.forecastInfo = res['data']}));
     console.log(this.forecastInfo)
   }
@@ -41,12 +35,5 @@ export class SearchBarComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.getForecastList(this.url);
   }
-
-  // public getForecastList(url) {
-  //   this.show = true;
-  //   this.subscription.add(this.hs.getWeatherForecast(url).subscribe(res => {console.log("Test if works");
-  //   this.forecastInfo = res['data']}))
-  // }
 }
