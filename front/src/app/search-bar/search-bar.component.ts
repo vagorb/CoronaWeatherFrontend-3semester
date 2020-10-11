@@ -21,11 +21,16 @@ export class SearchBarComponent implements OnInit {
 
 
 
-  url = "http://localhost:8080/api/Forecast/";
+  url = "http://localhost:8080/api/Forecast/city";
   onClick(value) {
+    // this.show = true;
+    // this.subscription.add(this.hs.getWeatherForecasts(this.url + value).subscribe(res => {console.log("Test if works");
+    //   this.forecastInfo = res['data']}));
+    // console.log(this.forecastInfo)
     this.show = true;
-    this.subscription.add(this.hs.getWeatherForecasts(this.url + value).subscribe(res => {console.log("Test if works");
-      this.forecastInfo = res['data']}));
+    this.subscription.add(this.hs.getForecast(value).subscribe(res => {console.log("HOPE");
+    this.forecastInfo = res['data']}));
+    // this.forecastInfo = res['data'];
     console.log(this.forecastInfo)
   }
   constructor(

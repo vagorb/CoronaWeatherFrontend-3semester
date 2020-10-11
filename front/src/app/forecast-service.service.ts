@@ -9,7 +9,7 @@ import {Forecast} from "./forecast";
 })
 export class ForecastServiceService {
 
-  url: string = "http://localhost:8080/api/Forecast";
+  private url: string = "http://localhost:8080/api/Forecast/city/";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -24,16 +24,20 @@ export class ForecastServiceService {
   //     catchError(this.handleError<Hero[]>('getForecasts', [])));
   // }
 
-  public getWeatherForecasts(url): Observable<Forecast[]> {
-    return this.http.get<Forecast[]>(this.url).pipe(tap(_ => this.log('fetched forecasts')),
-      catchError(this.handleError<Forecast[]>('getForecasts', [])));
-  }
+  // public getWeatherForecasts(url): Observable<Forecast[]> {
+  //   return this.http.get<Forecast[]>(this.url).pipe(tap(_ => this.log('fetched forecasts')),
+  //     catchError(this.handleError<Forecast[]>('getForecasts', [])));
+  // }
 
   // public getWeatherForecast(id: number): Observable<Forecast> {
   //   const csUrl = `${this.url}/${id}`;
   //   return this.http.get<Forecast>(csUrl).pipe(tap)
   // }
-
+  // configUrl = 'assets/config.json';
+  //
+  // getConfig() {
+  //   return this.http.get(this.configUrl);
+  // }
 
 
 
@@ -90,6 +94,16 @@ export class ForecastServiceService {
   //     catchError(this.handleError<any>('updateHero'))
   //   );
   // }
+  getForecasts(): Observable<Forecast[]> {
+    return this.http.get<Forecast[]>(this.url).pipe(tap(_ => this.log('fetched forecasts')),
+      catchError(this.handleError<Forecast[]>('getForecasts', [])));
+  }
+
+  getForecast(cityName: string): Observable<Forecast> {
+    const otherUrl = `${this.url}/${cityName}`;
+    return this.http.get<Forecast>(otherUrl).pipe(tap(_ => this.log(`fetched forecast id=${cityName}`)))
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
@@ -102,6 +116,6 @@ export class ForecastServiceService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    this.messageService.add(`ForecastService: ${message}`);
+    this.messageService.add(`ForecastserviceService: ${message}`);
   }
 }
