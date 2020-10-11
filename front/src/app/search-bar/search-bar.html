@@ -66,37 +66,38 @@
     <button class="result7DaysLatterButton"> Weather in 7 days </button>
   </div>
   <div class="resultCityName">
-    <p>{{cityName}}</p>
+<!--    <p>{{countryName}}</p>-->
+    <p class="city">{{city}}</p>
   </div>
   <div class="weatherTypeImage">
-    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">
+    <img src="/assets/images/{{weather}}Weather.PNG" class="weatherImage" alt="weatherImage">
   </div>
-  <div class="weatherInfoContainer"></div>
+  <div class="weatherInfoContainer">
+    <p>Country : {{countryName}}</p>
+    <p>Temperature : {{temperature}}</p>
+<!--    <p>Longitude : {{lon}}</p>-->
+<!--    <p>Latitude : {{lat}}</p>-->
+    <p>Wind : {{wind}}</p>
+    <p>Pressure : {{pressure}}</p>
+    <p>Humidity : {{humidity}}</p>
+    <p>Suggestion : {{suggestion}}</p>
+
+    <p>Corona virus information</p>
+    <p>Total cases : {{totalCases}}</p>
+    <p>Recovered cases : {{recoveredCases}}</p>
+    <p>Total deaths : {{totalDeaths}}</p>
+    <p>Current cases : {{currentCases}}</p>
+  </div>
 </div>
-<!--<div>-->
-<!--<div *ngIf="show" class="searchBarResultDiv">-->
 
-<!--  <div class="resultNow">-->
-<!--    <button class="resultNowButton"> Weather now </button>-->
-<!--&lt;!&ndash;    <input type="button" class="resultNowButton" >&ndash;&gt;-->
 
-<!--  </div>-->
-
-<!--  <div class="resultSevenDaysLater">-->
-<!--    <button class="resultSevenDaysLaterButton" > Weather in 7 days </button>-->
-<!--&lt;!&ndash;    <input type="radio" checked class="resultSevenDaysLaterButton" name="WeatherIn7Days">&ndash;&gt;-->
-<!--  </div>-->
-
-<!--  <div class="resultCityName">-->
-<!--    <p>{{cityName}}</p>-->
-<!--  </div>-->
-
-<!--  <div class="weatherTypeImage">-->
-<!--    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">-->
-<!--  </div>-->
-
-<!--  <div class="weatherInfoContainer">-->
-<!--  </div>-->
-
-<!--</div>-->
-<!--</div>-->
+<!-- country -->
+<!-- city -->
+<!-- weather -->
+<!-- temperature -->
+<!-- lon -->
+<!-- lat -->
+<!-- wind -->
+<!-- pressure -->
+<!-- humidity -->
+<!-- suggestion -->

@@ -63,11 +63,12 @@
 }
 
 .searchResultContainer {
-  background-color: red;
+  background-color: lightgoldenrodyellow;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 1%;
-  height: 750px;
+  height: auto;
+  width: auto;
 }
 
 .resultNow {
@@ -131,4 +132,14 @@
 
 .weatherTypeImage {
   text-align: right;
+}
+
+
+.weatherInfoContainer {
+  text-align: left;
+
+}
+
+.city {
+  background-color: white;
 }
