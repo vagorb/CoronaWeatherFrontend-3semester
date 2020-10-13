@@ -5,6 +5,7 @@ import {Observable, Subscription} from "rxjs";
 import {ForecastServiceService} from "../forecast-service.service";
 import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
 import {CoronaService} from "../corona.service";
+import {DailyForecastService} from "../daily-forecast.service";
 
 @Component({
   selector: 'app-search-bar',
@@ -12,22 +13,16 @@ import {CoronaService} from "../corona.service";
   styleUrls: ['./search-bar.css']
 })
 export class SearchBarComponent implements OnInit {
-  // forecast: Forecast;
 
   show: boolean = false;
-  // cityName: string = "";
-  // weatherImage: string = "";
-  ForecastSubscription = new Subscription();
-  coronaSubscription = new Subscription();
-  // forecastInfo: string;
-  // xhr = new XMLHttpRequest();
+  forecastSubscription = new Subscription();
+  dailySubscription = new Subscription();
   countryName = "";
   city = "";
   weather = "";
   temperature = "";
-  // lon = "";
-  // lat = "";
-// , this.lon = res['lon'], this.lat = res['lat']
+  lon = "";
+  lat = "";
   wind = "";
   pressure = "";
   humidity = "";
@@ -36,55 +31,71 @@ export class SearchBarComponent implements OnInit {
   recoveredCases = "";
   totalDeaths = "";
   currentCases = "";
-
+  coronaContainer = Object;
+  showToday = true;
+  showWeek = false;
 
 
   url = "http://localhost:8080/api/Forecast/city";
-  coronaUrl = "http://localhost:8080/api/coronaViruses/country/";
   onClick(value) {
-    // this.show = true;
-    // this.subscription.add(this.hs.getWeatherForecasts(this.url + value).subscribe(res => {console.log("Test if works");
-    //   this.forecastInfo = res['data']}));
-    // console.log(this.forecastInfo)
     this.show = true;
-    this.ForecastSubscription.add(this.hs.getForecast(value).subscribe(res => {console.log("RESPONSE INFO: " + JSON.stringify(res));
-    // this.forecastInfo = res['data']}));
+    this.forecastSubscription.add(this.hs.getForecast(value).subscribe(res => {console.log("RESPONSE INFO: " + JSON.stringify(res));
     this.countryName = res['countryName'], this.city = res['city'], this.weather = res['weather']
     , this.temperature = res['temperature'], this.wind = res['wind'], this.pressure = res['pressure'], this.humidity = res['humidity']
-      , this.suggestion = res['suggestion']}));
-    // while (this.countryName == "") {
-    // }
-    setTimeout(() => {
-      this.coronaSubscription.add(this.coronaService.getCorona(this.countryName).subscribe(resp => {console.log(JSON.stringify(resp));
-      this.totalCases = resp['totalCases'], this.recoveredCases = resp['recoveredCases'], this.totalDeaths = resp['totalDeaths']
-      , this.currentCases = resp['currentCases']}))
-    }, 750);
+      , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon']
+      , this.totalCases = this.coronaContainer['totalCases'], this.recoveredCases = this.coronaContainer['recoveredCases']
+    , this.totalDeaths = this.coronaContainer['totalDeaths'], this.currentCases = this.coronaContainer['currentCases']
+    , this.sevenDayForecast(this.lat, this.lon)}));
+  }
+
+  first = Object;
+  second = Object;
+  third = Object;
+  fourth = Object;
+  fifth = Object;
+  sixth = Object;
+  seventh = Object;
+  sevenDayForecast(lat: string, lon: string) {
+      this.dailySubscription.add(this.dailyForecast.getDailyForecast(this.lat, this.lon).subscribe(
+        res => {console.log("Response info " +JSON.stringify(res));
+      this.first = res[0], this.second = res[1], this.third = res[2], this.fourth = res[3], this.fifth = res[4],
+      this.sixth = res[5], this.seventh = res[6], this.objectCleaning()}));
+  }
+
+  showWeeklyForecast() {
+    this.showToday = false;
+    this.showWeek = true;
+  }
+
+  showNowForecast() {
+    this.showWeek = false;
+    this.showToday = true;
+  }
 
 
-    // COuntryName
-    // totalCases
-    //recoveredCases
-    //totalDeaths
-    //currentCases
-
-
-    // console.log(this.countryName);
-    // console.log(this.city);
-    // console.log(this.weather);
-    // console.log(this.temperature);
-    // console.log(this.lon);
-    // console.log(this.lat);
-    // console.log(this.wind);
-    // console.log(this.pressure);
-    // console.log(this.humidity);
-    // console.log(this.suggestion);
+  objectCleaning() {
+    this.first['weather'] = this.first['weather'].replace("\"", "");
+    this.second['weather'] = this.second['weather'].replace("\"", "");
+    this.third['weather'] = this.third['weather'].replace("\"", "");
+    this.fourth['weather'] = this.fourth['weather'].replace("\"", "");
+    this.fifth['weather'] = this.fifth['weather'].replace("\"", "");
+    this.sixth['weather'] = this.sixth['weather'].replace("\"", "");
+    this.seventh['weather'] = this.seventh['weather'].replace("\"", "");
+    this.first['weather'] = this.first['weather'].replace("\"", "");
+    this.second['weather'] = this.second['weather'].replace("\"", "");
+    this.third['weather'] = this.third['weather'].replace("\"", "");
+    this.fourth['weather'] = this.fourth['weather'].replace("\"", "");
+    this.fifth['weather'] = this.fifth['weather'].replace("\"", "");
+    this.sixth['weather'] = this.sixth['weather'].replace("\"", "");
+    this.seventh['weather'] = this.seventh['weather'].replace("\"", "");
   }
   constructor(
     private route: ActivatedRoute,
     private hs: ForecastServiceService,
-    private coronaService: CoronaService
-    // private location: Location
+    private dailyForecast: DailyForecastService
   ) { }
+
+
 
   ngOnInit() {
   }

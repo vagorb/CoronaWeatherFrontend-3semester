@@ -1,33 +1,3 @@
-/*.magnifyingGlass {*/
-/*  position: relative;*/
-/*  text-align: left;*/
-/*  width: 20px;*/
-/*  !*padding: 0;*!*/
-/*  !*margin: 0;*!*/
-/*  !*overflow-x: hidden;*!*/
-/*  !*padding: auto 100px;*!*/
-/*  !*top: 100px;*!*/
-/*  !*left: 150px;*!*/
-/*  !*height: 1px;*!*/
-/*  !*width: 1px;*!*/
-/*}*/
-
-/*.magnifyingGlassImage {*/
-/*  !*margin: 500px;*!*/
-/*  !*border-left: 50px;*!*/
-/*  height: 60%;*/
-/*  width: 60%;*/
-/*}*/
-/*.appSearch {*/
-/*}*/
-
-/*.inputClass {*/
-/*  text-align: center;*/
-/*  width: auto;*/
-/*  height: auto;*/
-/*}*/
-
-
 .search {
   margin-right: 30%;
 }
@@ -35,61 +5,39 @@
 .inputClass {
   text-align: left;
   width: auto;
-  /*height: 10%;*/
   margin-top: 1%;
   margin-left: 45%;
-  /*margin-right: 40%;*/
 }
 
 .magnifyingGlass {
     position: relative;
     text-align: left;
     width: 20px;
-    /*padding: 0;*/
-    /*margin: 0;*/
-    /*overflow-x: hidden;*/
-    /*padding: auto 100px;*/
-    /*top: 100px;*/
-    /*left: 150px;*/
-    /*height: 1px;*/
-    /*width: 1px;*/
 }
 
 .magnifyingGlassImage {
-    /*margin: 500px;*/
-    /*border-left: 50px;*/
     height: 60%;
     width: 60%;
 }
 
 .searchResultContainer {
+  float: left;
+  display: inline-block;
   background-color: lightgoldenrodyellow;
-  margin-left: 10%;
-  margin-right: 10%;
+  /*margin-left: -20%;*/
+  /*margin-right: 20%;*/
   margin-top: 1%;
   height: auto;
-  width: auto;
+  width: 80%;
+  border-style: solid;
 }
 
 .resultNow {
   display: inline-block;
-  /*width: 50%;*/
   margin-left: 20%;
-  /*display: inline-block;*/
-  /*text-align: right;*/
-  /*margin: 0;*/
-  /*margin-left: 40%;*/
-  /*margin-right: 40%;*/
-  /*margin: 0;*/
-  /*width: 25%;*/
-  /*min-width: 25%;*/
-  /*max-width: 25%;*/
-  /*width: 25%;*/
-  /*margin-left: 40%;*/
 }
 
 .resultNowButton {
-  /*display: inline-block;*/
   text-align: center;
   height: 50px;
   width: 200px;
@@ -98,32 +46,13 @@
 .result7DaysLater {
   display: inline-block;
   margin-left: 20%;
-  /*text-align: ;*/
-  /*position: relative;*/
-  /*top: 20%;*/
-  /*left: 65%;*/
-  /*position: relative;*/
-  /*left: 75%;*/
-  /*!*top*!*/
-  /*top: 100%*/
 }
 
 .result7DaysLatterButton {
   text-align: center;
   height: 50px;
   width: 200px;
-  /*height: 50px;*/
-  /*width: 200px;*/
 }
-
-
-/*.resultButtonContainer {*/
-/*  width: auto;*/
-/*}*/
-
-/*.resultButtonContainer {*/
-/*  width: 50%;*/
-/*}*/
 
 .resultCityName {
   display: inline-block;
@@ -137,9 +66,74 @@
 
 .weatherInfoContainer {
   text-align: left;
-
 }
 
 .city {
   background-color: white;
+}
+
+
+.nextDay1 {
+  display: inline-block;
+}
+.nextDay2 {
+  display: inline-block;
+
+}
+.nextDay3 {
+  display: inline-block;
+
+}
+.nextDay4 {
+  display: inline-block;
+
+}
+.nextDay5 {
+  display: inline-block;
+
+}
+.nextDay6 {
+  display: inline-block;
+
+}
+.nextDay7 {
+  display: inline-block;
+
+}
+
+/*.mostSearched {*/
+/*  height: 500px;*/
+/*  width: 500px;*/
+/*  background-color: lightgoldenrodyellow;*/
+/*  display: inline-block;*/
+/*}*/
+
+.mostSearchedContainer {
+  background-color: lightgoldenrodyellow;
+  border-style: solid;
+  width: 19%;
+  height: auto;
+  margin-top: 1%;
+
+  /*right: 0%;*/
+  /*width: 39%;*/
+  /*margin-left: 0;*/
+  /*margin-left: 10%;*/
+  /*margin-left: 39%;*/
+  /*padding: 0;*/
+  display: inline-block;
+  float: right;
+
+  /*text-align: center;*/
+}
+
+.mostSearched {
+  position: center;
+  /*text-align: center;*/
+  width: auto;
+  height: auto;
+
+  /*position: center;*/
+  /*margin-left: 50%;*/
+  /*margin-right: 50%;*/
 }

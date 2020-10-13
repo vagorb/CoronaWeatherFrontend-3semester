@@ -1,51 +1,3 @@
-<!--<div class="appSearch">-->
-<!--  <input #myInput type="text" class="inputClass">-->
-<!--  <button (click)="onClick(myInput.value)">-->
-<!--    <div class="magnifyingGlass">-->
-<!--      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
-<!--    </div>-->
-<!--  </button>-->
-<!--</div>-->
-
-<!--<div>-->
-<!--<div *ngIf="show" class="searchBarResultDiv">-->
-
-<!--  <div class="resultNow">-->
-<!--    <button class="resultNowButton"> Weather now </button>-->
-<!--&lt;!&ndash;    <input type="button" class="resultNowButton" >&ndash;&gt;-->
-
-<!--  </div>-->
-
-<!--  <div class="resultSevenDaysLater">-->
-<!--    <button class="resultSevenDaysLaterButton" > Weather in 7 days </button>-->
-<!--&lt;!&ndash;    <input type="radio" checked class="resultSevenDaysLaterButton" name="WeatherIn7Days">&ndash;&gt;-->
-<!--  </div>-->
-
-<!--  <div class="resultCityName">-->
-<!--    <p>{{cityName}}</p>-->
-<!--  </div>-->
-
-<!--  <div class="weatherTypeImage">-->
-<!--    <img src="/assets/images/{{weatherImage}}Weather.PNG" class="weatherImage" alt="weatherImage">-->
-<!--  </div>-->
-
-<!--  <div class="weatherInfoContainer">-->
-<!--  </div>-->
-
-<!--</div>-->
-<!--</div>-->
-
-
-<!--div class="appSearch">-->
-<!--<input #myInput type="text" class="inputClass">-->
-<!--<button (click)="onClick(myInput.value)">-->
-<!--  <div class="magnifyingGlass">-->
-<!--    <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
-<!--  </div>-->
-<!--</button>-->
-<!--</div>-->
-
-
 <div class="search">
   <input #myInput type="text" class="inputClass">
   <button (click)="onClick(myInput.value)">
@@ -60,10 +12,11 @@
 <div *ngIf="show" class="searchResultContainer">
 <!--  <div class="resultButtonContainer">-->
   <div class="resultNow">
-  <button class="resultNowButton"> Weather now </button>
+  <button (click)="showNowForecast()" class="resultNowButton"> Weather now </button>
   </div>
   <div class="result7DaysLater">
-    <button class="result7DaysLatterButton"> Weather in 7 days </button>
+    <button (click)="showWeeklyForecast()" class="result7DaysLatterButton"> Weather in 7 days </button>
+
   </div>
   <div class="resultCityName">
 <!--    <p>{{countryName}}</p>-->
@@ -73,6 +26,7 @@
     <img src="/assets/images/{{weather}}Weather.PNG" class="weatherImage" alt="weatherImage">
   </div>
   <div class="weatherInfoContainer">
+    <div *ngIf="showToday" class="today">
     <p>Country : {{countryName}}</p>
     <p>Temperature : {{temperature}}</p>
 <!--    <p>Longitude : {{lon}}</p>-->
@@ -81,23 +35,95 @@
     <p>Pressure : {{pressure}}</p>
     <p>Humidity : {{humidity}}</p>
     <p>Suggestion : {{suggestion}}</p>
-
     <p>Corona virus information</p>
     <p>Total cases : {{totalCases}}</p>
     <p>Recovered cases : {{recoveredCases}}</p>
     <p>Total deaths : {{totalDeaths}}</p>
     <p>Current cases : {{currentCases}}</p>
+    </div>
+
+    <div *ngIf="showWeek" class="week">
+    <div class="nextDay1">
+      <p>Weather in one day</p>
+      <p>{{first['day']}}</p>
+      <p>{{first['night']}}</p>
+      <p>{{first['weather']}}</p>
+      <p>{{first['pressure']}}</p>
+      <p>{{first['humidity']}}</p>
+      <p>{{first['wind']}}</p>
+    </div>
+
+
+
+    <div class="nextDay2">
+      <p>Weather in two days</p>
+      <p>{{second['day']}}</p>
+      <p>{{second['night']}}</p>
+      <p>{{second['weather']}}</p>
+      <p>{{second['pressure']}}</p>
+      <p>{{second['humidity']}}</p>
+      <p>{{second['wind']}}</p>
+    </div>
+
+    <div class="nextDay3">
+      <p>Weather in three days</p>
+      <p>{{third['day']}}</p>
+      <p>{{third['night']}}</p>
+      <p>{{third['weather']}}</p>
+      <p>{{third['pressure']}}</p>
+      <p>{{third['humidity']}}</p>
+      <p>{{third['wind']}}</p>
+    </div>
+
+    <div class="nextDay4">
+      <p>Weather in four days</p>
+      <p>{{fourth['day']}}</p>
+      <p>{{fourth['night']}}</p>
+      <p>{{fourth['weather']}}</p>
+      <p>{{fourth['pressure']}}</p>
+      <p>{{fourth['humidity']}}</p>
+      <p>{{fourth['wind']}}</p>
+    </div>
+
+    <div class="nextDay5">
+      <p>Weather in five days</p>
+      <p>{{fifth['day']}}</p>
+      <p>{{fifth['night']}}</p>
+      <p>{{fifth['weather']}}</p>
+      <p>{{fifth['pressure']}}</p>
+      <p>{{fifth['humidity']}}</p>
+      <p>{{fifth['wind']}}</p>
+    </div>
+
+    <div class="nextDay6">
+      <p>Weather in six days</p>
+      <p>{{sixth['day']}}</p>
+      <p>{{sixth['night']}}</p>
+      <p>{{sixth['weather']}}</p>
+      <p>{{sixth['pressure']}}</p>
+      <p>{{sixth['humidity']}}</p>
+      <p>{{sixth['wind']}}</p>
+    </div>
+
+    <div class="nextDay7">
+      <p>Weather in seven days</p>
+      <p>{{seventh['day']}}</p>
+      <p>{{seventh['night']}}</p>
+      <p>{{seventh['weather']}}</p>
+      <p>{{seventh['pressure']}}</p>
+      <p>{{seventh['humidity']}}</p>
+      <p>{{seventh['wind']}}</p>
+    </div>
+    </div>
   </div>
 </div>
-
-
-<!-- country -->
-<!-- city -->
-<!-- weather -->
-<!-- temperature -->
-<!-- lon -->
-<!-- lat -->
-<!-- wind -->
-<!-- pressure -->
-<!-- humidity -->
-<!-- suggestion -->
+<div class="mostSearchedContainer">
+  <div class="mostSearched">
+    <p>Most searched cities</p>
+  <p>1 Text for test</p>
+  <p>2 Text for test</p>
+  <p>3 Text for test</p>
+  <p>4 Text for test</p>
+  <p>5 Text for test</p>
+  </div>
+</div>

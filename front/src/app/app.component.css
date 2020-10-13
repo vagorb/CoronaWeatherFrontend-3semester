@@ -107,6 +107,7 @@
   background-color: red;
   text-align: right;
   height: 45px;
+  /*border-style: solid;*/
 }
 
 li {
@@ -140,4 +141,9 @@ a {
   height: 50px;
   width: 99%;
   bottom: 0;
+}
+
+.appContainer {
+  height: auto;
+  width: auto;
 }
