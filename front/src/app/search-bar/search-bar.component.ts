@@ -48,6 +48,7 @@ export class SearchBarComponent implements OnInit {
     , this.sevenDayForecast(this.lat, this.lon)}));
   }
 
+  zero = Object;
   first = Object;
   second = Object;
   third = Object;
@@ -58,8 +59,8 @@ export class SearchBarComponent implements OnInit {
   sevenDayForecast(lat: string, lon: string) {
       this.dailySubscription.add(this.dailyForecast.getDailyForecast(this.lat, this.lon).subscribe(
         res => {console.log("Response info " +JSON.stringify(res));
-      this.first = res[0], this.second = res[1], this.third = res[2], this.fourth = res[3], this.fifth = res[4],
-      this.sixth = res[5], this.seventh = res[6], this.objectCleaning()}));
+      this.zero = res[0], this.first = res[1], this.second = res[2], this.third = res[3], this.fourth = res[4], this.fifth = res[5],
+      this.sixth = res[6], this.seventh = res[7], this.objectCleaning()}));
   }
 
   showWeeklyForecast() {
@@ -74,6 +75,7 @@ export class SearchBarComponent implements OnInit {
 
 
   objectCleaning() {
+    this.zero['weather'] = this.zero['weather'].replace("\"", "");
     this.first['weather'] = this.first['weather'].replace("\"", "");
     this.second['weather'] = this.second['weather'].replace("\"", "");
     this.third['weather'] = this.third['weather'].replace("\"", "");
@@ -81,6 +83,7 @@ export class SearchBarComponent implements OnInit {
     this.fifth['weather'] = this.fifth['weather'].replace("\"", "");
     this.sixth['weather'] = this.sixth['weather'].replace("\"", "");
     this.seventh['weather'] = this.seventh['weather'].replace("\"", "");
+    this.zero['weather'] = this.zero['weather'].replace("\"", "");
     this.first['weather'] = this.first['weather'].replace("\"", "");
     this.second['weather'] = this.second['weather'].replace("\"", "");
     this.third['weather'] = this.third['weather'].replace("\"", "");

@@ -11,7 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 // import {Http, Response} from '@angular/http'
 import {HttpClientModule} from "@angular/common/http";
-import { AdminComponent } from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { AdminComponent } from './admin/admin.component';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    AdminComponent
+    // AdminComponent
   ],
   imports: [
     BrowserModule,

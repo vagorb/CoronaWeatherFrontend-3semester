@@ -72,6 +72,9 @@
   background-color: white;
 }
 
+.Day0 {
+  display: inline-block;
+}
 
 .nextDay1 {
   display: inline-block;

@@ -8,5 +8,4 @@ export interface Forecast {
   wind: string;
   pressure: string;
   humidity: string;
-
 }

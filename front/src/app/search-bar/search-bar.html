@@ -43,6 +43,16 @@
     </div>
 
     <div *ngIf="showWeek" class="week">
+      <div class="Day0">
+        <p>Weather today</p>
+        <p>{{zero['day']}}</p>
+        <p>{{zero['night']}}</p>
+        <p>{{zero['weather']}}</p>
+        <p>{{zero['pressure']}}</p>
+        <p>{{zero['humidity']}}</p>
+        <p>{{zero['wind']}}</p>
+      </div>
+
     <div class="nextDay1">
       <p>Weather in one day</p>
       <p>{{first['day']}}</p>
