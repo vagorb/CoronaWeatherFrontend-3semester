@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
+import {ForecastServiceService} from "./forecast-service.service";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class AppComponent {
   title = 'CoronaWeather';
+
+  constructor(hs : ForecastServiceService) {
+  }
+
 
 }

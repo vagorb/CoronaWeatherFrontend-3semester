@@ -4,7 +4,7 @@ import {ActivatedRoute} from "@angular/router";
 import {Observable, Subscription} from "rxjs";
 import {ForecastServiceService} from "../forecast-service.service";
 import {JsonObject} from "@angular/compiler-cli/ngcc/src/packages/entry_point";
-import {CoronaService} from "../corona.service";
+// import {CoronaService} from "../corona.service";
 import {DailyForecastService} from "../daily-forecast.service";
 
 @Component({
@@ -101,5 +101,6 @@ export class SearchBarComponent implements OnInit {
 
 
   ngOnInit() {
+    this.hs.getTopSearches()
   }
 }
