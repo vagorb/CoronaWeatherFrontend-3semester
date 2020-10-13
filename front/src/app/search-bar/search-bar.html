@@ -130,10 +130,20 @@
 <div class="mostSearchedContainer">
   <div class="mostSearched">
     <p>Most searched cities</p>
-  <p>1 Text for test</p>
-  <p>2 Text for test</p>
-  <p>3 Text for test</p>
-  <p>4 Text for test</p>
-  <p>5 Text for test</p>
+    <span *ngIf="topOne!=undefined" class="topCities">
+  <p>1 {{topOne}}</p>
+    </span>
+    <span *ngIf="topTwo!=undefined" class="topCities">
+  <p>2 {{topTwo}}</p>
+    </span>
+    <span *ngIf="topThree!=undefined" class="topCities">
+  <p>3 {{topThree}}</p>
+    </span>
+    <span *ngIf="topFour!=undefined" class="topCities">
+  <p>4 {{topFour}}</p>
+    </span>
+    <span *ngIf="topFive!=undefined" class="topCities">
+  <p>5 {{topFive}}</p>
+    </span>
   </div>
 </div>

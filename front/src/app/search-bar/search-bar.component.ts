@@ -17,6 +17,7 @@ export class SearchBarComponent implements OnInit {
   show: boolean = false;
   forecastSubscription = new Subscription();
   dailySubscription = new Subscription();
+  topFiveSubscription = new Subscription();
   countryName = "";
   city = "";
   weather = "";
@@ -40,13 +41,29 @@ export class SearchBarComponent implements OnInit {
   onClick(value) {
     this.show = true;
     this.forecastSubscription.add(this.hs.getForecast(value).subscribe(res => {console.log("RESPONSE INFO: " + JSON.stringify(res));
-    this.countryName = res['countryName'], this.city = res['city'], this.weather = res['weather']
+    this.updateMostSearched(), this.countryName = res['countryName'], this.city = res['city'], this.weather = res['weather']
     , this.temperature = res['temperature'], this.wind = res['wind'], this.pressure = res['pressure'], this.humidity = res['humidity']
       , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon']
       , this.totalCases = this.coronaContainer['totalCases'], this.recoveredCases = this.coronaContainer['recoveredCases']
     , this.totalDeaths = this.coronaContainer['totalDeaths'], this.currentCases = this.coronaContainer['currentCases']
     , this.sevenDayForecast(this.lat, this.lon)}));
+    console.log(this.topOne);
+    console.log(this.topTwo);
+    console.log(this.topThree);
+    console.log(this.topFour);
+    console.log(this.topFive);
   }
+  topOne: string = '';
+  topTwo: string = '';
+  topThree: string = '';
+  topFour: string = '';
+  topFive: string = '';
+  updateMostSearched() {
+    this.topFiveSubscription.add(this.hs.getTopSearches().
+    subscribe(res => {
+      console.log("RESPONSE INFO: " + JSON.stringify(res));
+    this.topOne = res[0], this.topTwo = res[1], this.topThree = res[2], this.topFour = res[3], this.topFive = res[4]}));
+  };
 
   zero = Object;
   first = Object;
@@ -101,6 +118,6 @@ export class SearchBarComponent implements OnInit {
 
 
   ngOnInit() {
-    this.hs.getTopSearches()
+    this.updateMostSearched()
   }
 }
