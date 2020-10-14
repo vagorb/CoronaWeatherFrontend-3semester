@@ -20,43 +20,44 @@
 <!--  <input> Weather-->
 <!--  <input> Wind-->
   <div>
-  <input type="text" placeholder="City...">
+  <input #myInput1 type="text" placeholder="City...">
   </div>
   <div>
-    <input type="text" placeholder="Country">
+    <input #myInput2 type="text" placeholder="Country">
   </div>
   <div>
-    <input type="text" placeholder="Humidity">
+    <input #myInput3 type="text" placeholder="Humidity">
+  </div>
+<!--  <div>-->
+<!--    <input #myInput type="text" placeholder="ID(setToNULL)">-->
+<!--  </div>-->
+  <div>
+    <input #myInput4 type="text" placeholder="Lat">
   </div>
   <div>
-    <input type="text" placeholder="ID(setToNULL)">
+    <input #myInput5 type="text" placeholder="Lon">
+  </div>
+<!--  <div>-->
+<!--    <input #myInput type="text" placeholder="Number if searches(DEFAULT IT)">-->
+<!--  </div>-->
+  <div>
+    <input #myInput6 type="text" placeholder="Pressure">
+  </div>
+<!--  <div>-->
+<!--    <input #myInput type="text" placeholder="Suggestion(DEFAULT IT)">-->
+<!--  </div>-->
+  <div>
+    <input #myInput7 type="text" placeholder="Temperature">
+  </div>
+<!--  <div>-->
+<!--    <input #myInput type="text" placeholder="Up to date(DEFAULT IT)">-->
+<!--  </div>-->
+  <div>
+    <input #myInput8 type="text" placeholder="Weather">
   </div>
   <div>
-    <input type="text" placeholder="Lat">
+    <input #myInput9 type="text" placeholder="Wind">
   </div>
-  <div>
-    <input type="text" placeholder="Lon">
-  </div>
-  <div>
-    <input type="text" placeholder="Number if searches(DEFAULT IT)">
-  </div>
-  <div>
-    <input type="text" placeholder="Pressure">
-  </div>
-  <div>
-    <input type="text" placeholder="Suggestion(DEFAULT IT)">
-  </div>
-  <div>
-    <input type="text" placeholder="Temperature">
-  </div>
-  <div>
-    <input type="text" placeholder="Up to date(DEFAULT IT)">
-  </div>
-  <div>
-    <input type="text" placeholder="Weather">
-  </div>
-  <div>
-    <input type="text" placeholder="Wind">
-  </div>
-  <button>Finish</button>
+  <button (click)="onFinish(myInput1.value, myInput2.value, myInput3.value, myInput4.value, myInput5.value
+  , myInput6.value, myInput7.value, myInput8.value, myInput9.value)">Finish</button>
 </div>
