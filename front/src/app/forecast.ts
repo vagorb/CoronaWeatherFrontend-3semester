@@ -1,5 +1,5 @@
 export interface Forecast {
-  countryName: string;
+  countryName: string
   city: string;
   weather: string;
   temperature: string;
@@ -8,4 +8,8 @@ export interface Forecast {
   wind: string;
   pressure: string;
   humidity: string;
+  id: string;
+  numOfSearches: number;
+  suggestion: string;
+  upToDate: string;
 }

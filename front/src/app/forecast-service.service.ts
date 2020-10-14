@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable, of, throwError} from 'rxjs';
+import {Observable, of, Subscription, throwError} from 'rxjs';
 import {catchError, retry, tap} from 'rxjs/operators';
 import {MessageService} from "./message.service";
 import {Forecast} from "./forecast";
@@ -32,8 +32,8 @@ export class ForecastServiceService {
     return this.http.get<Forecast>(this.url).pipe(tap(_ => this.log(`fetched forecast top results`)))
   }
 
-  postForecast(forecast:  Forecast): Observable<Forecast> {
-    return this.http.post<Forecast>(this.url, forecast, this.httpOptions).pipe(tap(_ => this.log(`adding new forecast`)))
+  postForecast(forecast:  Forecast): Subscription {
+    return this.http.post<Forecast>(this.url, forecast, this.httpOptions).pipe(tap(_ => this.log(`adding new forecast`))).subscribe(res => (console.log(res)))
   }
 
   // /** POST: add a new hero to the server */
