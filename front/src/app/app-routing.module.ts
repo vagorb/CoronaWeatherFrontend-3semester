@@ -5,6 +5,8 @@ import {ContactComponent} from "./contact/contact.component";
 import {AppComponent} from "./app.component";
 import {HomeComponent} from "./home/home.component";
 import {AdminComponent} from "./admin/admin.component";
+import {LogInComponent} from "./log-in/log-in.component";
+import {UserComponent} from "./user/user.component";
 
 const routes: Routes = [
   // {path: '', redirectTo: 'about-component', pathMatch: 'full'},
@@ -12,8 +14,12 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  {path: 'admin', component: AdminComponent},
+  {
+    path: 'log in', component: LogInComponent,
+    children: [{path: 'user', component: UserComponent}, {path: 'admin', component: AdminComponent}]
+  },
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
+
   // {path: '', redirectTo: '/home', pathMatch: 'full'},
   // {path: 'home', redirectTo: 'about', pathMatch: 'full'}
   // {path: '', redirectTo: '/about', pathMatch: 'full'}
