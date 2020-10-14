@@ -43,10 +43,10 @@ export class SearchBarComponent implements OnInit {
     this.forecastSubscription.add(this.hs.getForecast(value).subscribe(res => {console.log("RESPONSE INFO: " + JSON.stringify(res));
     this.updateMostSearched(), this.countryName = res['countryName'], this.city = res['city'], this.weather = res['weather']
     , this.temperature = res['temperature'], this.wind = res['wind'], this.pressure = res['pressure'], this.humidity = res['humidity']
-      , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon']
-      , this.totalCases = this.coronaContainer['totalCases'], this.recoveredCases = this.coronaContainer['recoveredCases']
-    , this.totalDeaths = this.coronaContainer['totalDeaths'], this.currentCases = this.coronaContainer['currentCases']
-    , this.sevenDayForecast(this.lat, this.lon)}));
+      , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon'],
+      this.sevenDayForecast(this.lat, this.lon), this.totalCases = this.coronaContainer['totalCases']
+      , this.recoveredCases = this.coronaContainer['recoveredCases'], this.totalDeaths = this.coronaContainer['totalDeaths']
+      , this.currentCases = this.coronaContainer['currentCases']}));
     console.log(this.topOne);
     console.log(this.topTwo);
     console.log(this.topThree);
