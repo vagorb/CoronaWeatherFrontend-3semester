@@ -13,7 +13,6 @@ import {DailyForecastService} from "../daily-forecast.service";
   styleUrls: ['./search-bar.css']
 })
 export class SearchBarComponent implements OnInit {
-
   show: boolean = false;
   forecastSubscription = new Subscription();
   dailySubscription = new Subscription();
@@ -36,17 +35,15 @@ export class SearchBarComponent implements OnInit {
   showToday = true;
   showWeek = false;
 
-
-  url = "http://localhost:8080/api/Forecast/city";
   onClick(value) {
     this.show = true;
     this.forecastSubscription.add(this.hs.getForecast(value).subscribe(res => {console.log("RESPONSE INFO: " + JSON.stringify(res));
     this.updateMostSearched(), this.countryName = res['countryName'], this.city = res['city'], this.weather = res['weather']
-    , this.temperature = res['temperature'], this.wind = res['wind'], this.pressure = res['pressure'], this.humidity = res['humidity']
-      , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon'],
-      this.sevenDayForecast(this.lat, this.lon), this.totalCases = this.coronaContainer['totalCases']
-      , this.recoveredCases = this.coronaContainer['recoveredCases'], this.totalDeaths = this.coronaContainer['totalDeaths']
-      , this.currentCases = this.coronaContainer['currentCases']}));
+      , this.temperature = res['temperature'], this.wind = res['wind'], this.pressure = res['pressure'], this.humidity = res['humidity']
+      , this.suggestion = res['suggestion'], this.coronaContainer = res['coronaVirus'], this.lat = res['lat'], this.lon = res['lon']
+      , this.sevenDayForecast(this.lat, this.lon)
+      , this.totalCases = this.coronaContainer['totalCases'], this.recoveredCases = this.coronaContainer['recoveredCases']
+      , this.totalDeaths = this.coronaContainer['totalDeaths'], this.currentCases = this.coronaContainer['currentCases']}));
     console.log(this.topOne);
     console.log(this.topTwo);
     console.log(this.topThree);
@@ -90,7 +87,6 @@ export class SearchBarComponent implements OnInit {
     this.showToday = true;
   }
 
-
   objectCleaning() {
     this.zero['weather'] = this.zero['weather'].replace("\"", "");
     this.first['weather'] = this.first['weather'].replace("\"", "");
@@ -114,8 +110,6 @@ export class SearchBarComponent implements OnInit {
     private hs: ForecastServiceService,
     private dailyForecast: DailyForecastService
   ) { }
-
-
 
   ngOnInit() {
     this.updateMostSearched()

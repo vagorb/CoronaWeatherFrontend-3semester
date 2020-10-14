@@ -9,9 +9,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-// import {Http, Response} from '@angular/http'
 import {HttpClientModule} from "@angular/common/http";
-// import { AdminComponent } from './admin/admin.component';
+import {LogInComponent} from "./log-in/log-in.component";
+import {AdminComponent} from "./admin/admin.component";
+import {UserComponent} from "./user/user.component";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,9 @@ import {HttpClientModule} from "@angular/common/http";
     AboutComponent,
     ContactComponent,
     HomeComponent,
+    LogInComponent,
+    AdminComponent,
+    UserComponent
     // AdminComponent
   ],
   imports: [
