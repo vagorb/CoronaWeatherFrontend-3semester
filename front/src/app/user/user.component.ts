@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ForecastServiceService} from "../forecast-service.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router, ROUTES} from "@angular/router";
 import {Forecast} from "../forecast";
+import { RouterModule, Routes } from '@angular/router';
+import {LogInComponent} from "../log-in/log-in.component";
 
 @Component({
   selector: 'app-user',
@@ -9,9 +11,12 @@ import {Forecast} from "../forecast";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  log = true;
   showForm = false;
   // forecastService = ForecastServiceService;
-  constructor(private forecastService: ForecastServiceService) { }
+  constructor(private forecastService: ForecastServiceService,
+              private router: Router,
+              private logIn: LogInComponent) { }
   forecast: Forecast = {
     'countryName' : '',
     'city' : '',
@@ -30,6 +35,15 @@ export class UserComponent implements OnInit {
 };
   numberOf = 1;
 
+  logOut() {
+    this.log = false;
+    // router.navigate(['/role']);
+    this.router.navigate(['/log_in']);
+    this.logIn.show = true;
+
+  }
+
+
   ngOnInit(): void {
   }
 
@@ -37,19 +51,17 @@ export class UserComponent implements OnInit {
     this.showForm = true;
   }
 
-  onFinish(city: string, country: string, humidity: string, lat: string, lon: string, pressure: string, temperature: string
-  , weather: string, wind: string) {
+  onFinish(city: string, country: string, lat: string, lon: string) {
     this.showForm = false;
     this.forecast.city = city;
     this.forecast.countryName = country;
-    this.forecast.humidity = humidity;
     this.forecast.lat = lat;
     this.forecast.lon = lon;
-    this.forecast.pressure = pressure;
-    this.forecast.temperature = temperature;
-    this.forecast.weather = weather;
-    this.forecast.wind = wind;
     this.forecast.numOfSearches = this.numberOf;
     this.forecastService.postForecast(this.forecast);
   }
 }
+// city
+// country
+// lat
+// lon

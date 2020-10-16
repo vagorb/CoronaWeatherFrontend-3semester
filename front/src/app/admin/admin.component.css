@@ -1,6 +1,12 @@
-div {
-  background-color: red;
-  height: 100px;
-  width: 100px;
-  text-align: left;
+/*div {*/
+/*  background-color: red;*/
+/*  height: 100px;*/
+/*  width: 100px;*/
+/*  text-align: left;*/
+/*}*/
+.adminPostContainer {
+  /*float: left;*/
+}
+.adminDeleteContainer {
+  /*float: right;*/
 }

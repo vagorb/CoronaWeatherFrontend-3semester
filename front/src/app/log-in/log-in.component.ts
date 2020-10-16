@@ -11,9 +11,11 @@ export class LogInComponent implements OnInit {
   log = false;
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    // window.location.reload()
   }
 
   onClick() {
