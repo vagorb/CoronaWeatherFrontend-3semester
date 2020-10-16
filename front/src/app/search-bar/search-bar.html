@@ -10,120 +10,128 @@
 
 
 <div *ngIf="show" class="searchResultContainer">
-<!--  <div class="resultButtonContainer">-->
+  <!--  <div class="resultButtonContainer">-->
   <div class="resultNow">
-  <button (click)="showNowForecast()" class="resultNowButton"> Weather now </button>
+    <button (click)="showNowForecast()" class="resultNowButton">Current weather</button>
   </div>
   <div class="result7DaysLater">
-    <button (click)="showWeeklyForecast()" class="result7DaysLatterButton"> Weather in 7 days </button>
+    <button (click)="showWeeklyForecast()" class="result7DaysLatterButton">8 day weather forecast</button>
 
   </div>
   <div class="resultCityName">
-<!--    <p>{{countryName}}</p>-->
-    <p class="city">{{city}}</p>
+    <!--    <p>{{countryName}}</p>-->
+    <p class="city">City : {{city}}</p>
   </div>
-  <div class="weatherTypeImage">
-    <img src="/assets/images/{{weather}}Weather.PNG" class="weatherImage" alt="weatherImage">
+  <div class="imageContainer">
+    <div class="weatherTypeImage">
+      <img src="/assets/images/{{weather}}.png" class="weatherImage" alt="weatherImage">
+    </div>
+    <div class="weatherText">
+      <p>Weather : {{weather}}</p>
+    </div>
   </div>
   <div class="weatherInfoContainer">
     <div *ngIf="showToday" class="today">
-    <p>Country : {{countryName}}</p>
-    <p>Temperature : {{temperature}}</p>
-<!--    <p>Longitude : {{lon}}</p>-->
-<!--    <p>Latitude : {{lat}}</p>-->
-    <p>Wind : {{wind}}</p>
-    <p>Pressure : {{pressure}}</p>
-    <p>Humidity : {{humidity}}</p>
-    <p>Suggestion : {{suggestion}}</p>
-    <p>Corona virus information</p>
-    <p>Total cases : {{totalCases}}</p>
-    <p>Recovered cases : {{recoveredCases}}</p>
-    <p>Total deaths : {{totalDeaths}}</p>
-    <p>Current cases : {{currentCases}}</p>
+      <p>Country : {{countryName}}</p>
+      <p>Temperature : {{temperature}}</p>
+      <!--    <p>Longitude : {{lon}}</p>-->
+      <!--    <p>Latitude : {{lat}}</p>-->
+      <p>Wind : {{wind}}</p>
+      <p>Pressure : {{pressure}}</p>
+      <p>Humidity : {{humidity}}</p>
+      <p>Suggestion : {{suggestion}}</p>
+      <p>Corona virus information</p>
+      <p>Total cases : {{totalCases}}</p>
+      <p>Recovered cases : {{recoveredCases}}</p>
+      <p>Total deaths : {{totalDeaths}}</p>
+      <p>Current cases : {{currentCases}}</p>
     </div>
 
     <div *ngIf="showWeek" class="week">
-      <div class="Day0">
-        <p>Weather today</p>
-        <p>Day : {{zero['day']}}</p>
-        <p>Night : {{zero['night']}}</p>
-        <p>Weather : {{zero['weather']}}</p>
-        <p>Pressure : {{zero['pressure']}}</p>
-        <p>Humidity : {{zero['humidity']}}</p>
-        <p>Wind : {{zero['wind']}}</p>
+      <div class="first4">
+        <div class="Day0">
+          <p>Weather today</p>
+          <p>Day : {{zero['day']}}</p>
+          <p>Night : {{zero['night']}}</p>
+          <p>Weather : {{zero['weather']}}</p>
+          <p>Pressure : {{zero['pressure']}}</p>
+          <p>Humidity : {{zero['humidity']}}</p>
+          <p>Wind : {{zero['wind']}}</p>
+        </div>
+
+        <div class="nextDay1">
+          <p>Weather in 1 day </p>
+          <p>Day : {{first['day']}}</p>
+          <p>Night : {{first['night']}}</p>
+          <p>Weather : {{first['weather']}}</p>
+          <p>Pressure : {{first['pressure']}}</p>
+          <p>Humidity : {{first['humidity']}}</p>
+          <p>Wind : {{first['wind']}}</p>
+        </div>
+
+
+
+        <div class="nextDay2">
+          <p>Weather in 2 days</p>
+          <p>Day : {{second['day']}}</p>
+          <p>Night : {{second['night']}}</p>
+          <p>Weather : {{second['weather']}}</p>
+          <p>Pressure : {{second['pressure']}}</p>
+          <p>Humidity : {{second['humidity']}}</p>
+          <p>Wind : {{second['wind']}}</p>
+        </div>
+
+        <div class="nextDay3">
+          <p>Weather in 3 days</p>
+          <p>Day : {{third['day']}}</p>
+          <p>Night : {{third['night']}}</p>
+          <p>Weather : {{third['weather']}}</p>
+          <p>Pressure : {{third['pressure']}}</p>
+          <p>Humidity : {{third['humidity']}}</p>
+          <p>Wind : {{third['wind']}}</p>
+        </div>
       </div>
+      <div class="last4">
+        <div class="nextDay4">
+          <p>Weather in 4 days</p>
+          <p>Day : {{fourth['day']}}</p>
+          <p>Night : {{fourth['night']}}</p>
+          <p>Weather : {{fourth['weather']}}</p>
+          <p>Pressure : {{fourth['pressure']}}</p>
+          <p>Humidity : {{fourth['humidity']}}</p>
+          <p>Wind : {{fourth['wind']}}</p>
+        </div>
 
-    <div class="nextDay1">
-      <p>Weather in one day</p>
-      <p>Day : {{first['day']}}</p>
-      <p>Night : {{first['night']}}</p>
-      <p>Weather : {{first['weather']}}</p>
-      <p>Pressure : {{first['pressure']}}</p>
-      <p>Humidity : {{first['humidity']}}</p>
-      <p>Wind : {{first['wind']}}</p>
-    </div>
+        <div class="nextDay5">
+          <p>Weather in 5 days</p>
+          <p>Day : {{fifth['day']}}</p>
+          <p>Night : {{fifth['night']}}</p>
+          <p>Weather : {{fifth['weather']}}</p>
+          <p>Pressure : {{fifth['pressure']}}</p>
+          <p>Humidity : {{fifth['humidity']}}</p>
+          <p>Wind : {{fifth['wind']}}</p>
+        </div>
 
+        <div class="nextDay6">
+          <p>Weather in 6 days</p>
+          <p>Day : {{sixth['day']}}</p>
+          <p>Night : {{sixth['night']}}</p>
+          <p>Weather : {{sixth['weather']}}</p>
+          <p>Pressure : {{sixth['pressure']}}</p>
+          <p>Humidity : {{sixth['humidity']}}</p>
+          <p>Wind : {{sixth['wind']}}</p>
+        </div>
 
-
-    <div class="nextDay2">
-      <p>Weather in two days</p>
-      <p>Day : {{second['day']}}</p>
-      <p>Night : {{second['night']}}</p>
-      <p>Weather : {{second['weather']}}</p>
-      <p>Pressure : {{second['pressure']}}</p>
-      <p>Humidity : {{second['humidity']}}</p>
-      <p>Wind : {{second['wind']}}</p>
-    </div>
-
-    <div class="nextDay3">
-      <p>Weather in three days</p>
-      <p>Day : {{third['day']}}</p>
-      <p>Night : {{third['night']}}</p>
-      <p>Weather : {{third['weather']}}</p>
-      <p>Pressure : {{third['pressure']}}</p>
-      <p>Humidity : {{third['humidity']}}</p>
-      <p>Wind : {{third['wind']}}</p>
-    </div>
-
-    <div class="nextDay4">
-      <p>Weather in four days</p>
-      <p>Day : {{fourth['day']}}</p>
-      <p>Night : {{fourth['night']}}</p>
-      <p>Weather : {{fourth['weather']}}</p>
-      <p>Pressure : {{fourth['pressure']}}</p>
-      <p>Humidity : {{fourth['humidity']}}</p>
-      <p>Wind : {{fourth['wind']}}</p>
-    </div>
-
-    <div class="nextDay5">
-      <p>Weather in five days</p>
-      <p>Day : {{fifth['day']}}</p>
-      <p>Night : {{fifth['night']}}</p>
-      <p>Weather : {{fifth['weather']}}</p>
-      <p>Pressure : {{fifth['pressure']}}</p>
-      <p>Humidity : {{fifth['humidity']}}</p>
-      <p>Wind : {{fifth['wind']}}</p>
-    </div>
-
-    <div class="nextDay6">
-      <p>Weather in six days</p>
-      <p>Day : {{sixth['day']}}</p>
-      <p>Night : {{sixth['night']}}</p>
-      <p>Weather : {{sixth['weather']}}</p>
-      <p>Pressure : {{sixth['pressure']}}</p>
-      <p>Humidity : {{sixth['humidity']}}</p>
-      <p>Wind : {{sixth['wind']}}</p>
-    </div>
-
-    <div class="nextDay7">
-      <p>Weather in seven days</p>
-      <p>Day : {{seventh['day']}}</p>
-      <p>Night : {{seventh['night']}}</p>
-      <p>Weather : {{seventh['weather']}}</p>
-      <p>Pressure : {{seventh['pressure']}}</p>
-      <p>Humidity : {{seventh['humidity']}}</p>
-      <p>Wind : {{seventh['wind']}}</p>
-    </div>
+        <div class="nextDay7">
+          <p>Weather in 7 days</p>
+          <p>Day : {{seventh['day']}}</p>
+          <p>Night : {{seventh['night']}}</p>
+          <p>Weather : {{seventh['weather']}}</p>
+          <p>Pressure : {{seventh['pressure']}}</p>
+          <p>Humidity : {{seventh['humidity']}}</p>
+          <p>Wind : {{seventh['wind']}}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -147,3 +155,6 @@
     </span>
   </div>
 </div>
+
+
+<!--/Smoke/Haze/Dust/Fog/Sand/Ash/Squall/Tornado-->

@@ -1,18 +1,3 @@
-/*.name {*/
-/*  height: 100px;*/
-/*  width: 100px;*/
-/*  background-color: yellow;*/
-/*}*/
-
-
-/*.contactContainer {*/
-/*  margin-right: 35%;*/
-/*}*/
-
-/*.contactInfo {*/
-/*  padding: 10%;*/
-/*}*/
-
 .contactContainer {
   background-color: lightgoldenrodyellow;
 }
@@ -27,10 +12,7 @@
 .contactInfoPhone {
   padding-bottom: 5%;
 }
-/*.contactInfo {*/
-/*  background-color: lightgray;*/
-/*  !*background-color: lightgray;*!*/
-/*}*/
+
 .atSign {
   width: 2.5%;
   height: 2.5%;
@@ -39,3 +21,13 @@
   width: 2.5%;
   height: 2.5%;
 }
+
+.addressLocation {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.contactInfoAddress {
+  padding-bottom: 5%;
+}
+

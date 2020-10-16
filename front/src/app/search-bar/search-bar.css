@@ -10,22 +10,20 @@
 }
 
 .magnifyingGlass {
-    position: relative;
-    text-align: left;
-    width: 20px;
+  position: relative;
+  text-align: left;
+  width: 20px;
 }
 
 .magnifyingGlassImage {
-    height: 60%;
-    width: 60%;
+  height: 60%;
+  width: 60%;
 }
 
 .searchResultContainer {
   float: left;
   display: inline-block;
   background-color: lightgoldenrodyellow;
-  /*margin-left: -20%;*/
-  /*margin-right: 20%;*/
   margin-top: 1%;
   height: auto;
   width: 80%;
@@ -61,55 +59,52 @@
 
 .weatherTypeImage {
   text-align: right;
+  float: right;
+  width: auto;
+  height: auto;
 }
-
 
 .weatherInfoContainer {
   text-align: left;
 }
 
 .city {
-  background-color: white;
+  /*background-color: white;*/
+  /*border-style: solid;*/
 }
 
 .Day0 {
+  margin-right: 16px;
   display: inline-block;
 }
 
 .nextDay1 {
+  margin-left: 14.1%;
   display: inline-block;
 }
 .nextDay2 {
+  margin-left: 14%;
   display: inline-block;
-
 }
 .nextDay3 {
+  margin-left: 14%;
   display: inline-block;
-
 }
 .nextDay4 {
   display: inline-block;
-
 }
 .nextDay5 {
+  margin-left: 14%;
   display: inline-block;
-
 }
 .nextDay6 {
+  margin-left: 14%;
   display: inline-block;
-
 }
 .nextDay7 {
+  margin-left: 14%;
   display: inline-block;
-
 }
-
-/*.mostSearched {*/
-/*  height: 500px;*/
-/*  width: 500px;*/
-/*  background-color: lightgoldenrodyellow;*/
-/*  display: inline-block;*/
-/*}*/
 
 .mostSearchedContainer {
   background-color: lightgoldenrodyellow;
@@ -117,26 +112,27 @@
   width: 19%;
   height: auto;
   margin-top: 1%;
-
-  /*right: 0%;*/
-  /*width: 39%;*/
-  /*margin-left: 0;*/
-  /*margin-left: 10%;*/
-  /*margin-left: 39%;*/
-  /*padding: 0;*/
   display: inline-block;
   float: right;
-
-  /*text-align: center;*/
 }
 
 .mostSearched {
   position: center;
-  /*text-align: center;*/
   width: auto;
   height: auto;
+}
 
-  /*position: center;*/
-  /*margin-left: 50%;*/
-  /*margin-right: 50%;*/
+.weatherImage {
+  height: 60%;
+  width: 50%;
+}
+
+.imageContainer {
+  float: right;
+  margin-right: 2%;
+}
+
+.weatherText {
+  text-align: center;
+  margin-left: 50%;
 }

@@ -67,6 +67,7 @@ export class AdminComponent implements OnInit {
   }
 
   onDelete(id: string) {
+    this.showDelete = false;
     const numberId: number  = parseInt(id);
     this.forecastService.deleteForecast(numberId).subscribe(res => {console.log(JSON.stringify(res));
     });
