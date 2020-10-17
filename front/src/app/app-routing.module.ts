@@ -9,8 +9,6 @@ import {LogInComponent} from "./log-in/log-in.component";
 import {UserComponent} from "./user/user.component";
 
 const routes: Routes = [
-  // {path: '', redirectTo: 'about-component', pathMatch: 'full'},
-  // {path: '', component: AppComponent},
   {path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
@@ -20,9 +18,6 @@ const routes: Routes = [
   },
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 
-  // {path: '', redirectTo: '/home', pathMatch: 'full'},
-  // {path: 'home', redirectTo: 'about', pathMatch: 'full'}
-  // {path: '', redirectTo: '/about', pathMatch: 'full'}
 ];
 
 @NgModule({

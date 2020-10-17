@@ -15,7 +15,6 @@ export class LogInComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // window.location.reload()
   }
 
   onClick() {

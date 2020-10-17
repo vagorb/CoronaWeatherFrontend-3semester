@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ForecastServiceService} from "../forecast-service.service";
 import {ActivatedRoute, Router, ROUTES} from "@angular/router";
 import {Forecast} from "../forecast";
-import { RouterModule, Routes } from '@angular/router';
 import {LogInComponent} from "../log-in/log-in.component";
 
 @Component({
@@ -13,7 +12,6 @@ import {LogInComponent} from "../log-in/log-in.component";
 export class UserComponent implements OnInit {
   log = true;
   showForm = false;
-  // forecastService = ForecastServiceService;
   constructor(private forecastService: ForecastServiceService,
               private router: Router,
               private logIn: LogInComponent) { }
@@ -37,7 +35,6 @@ export class UserComponent implements OnInit {
 
   logOut() {
     this.log = false;
-    // router.navigate(['/role']);
     this.router.navigate(['/log_in']);
     this.logIn.show = true;
 
@@ -61,7 +58,3 @@ export class UserComponent implements OnInit {
     this.forecastService.postForecast(this.forecast);
   }
 }
-// city
-// country
-// lat
-// lon

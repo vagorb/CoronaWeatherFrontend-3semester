@@ -73,8 +73,3 @@ export class AdminComponent implements OnInit {
     });
   }
 }
-// this.dailySubscription.add(this.dailyForecast.getDailyForecast(this.lat, this.lon).subscribe(
-//   res => {console.log("Response info " +JSON.stringify(res));
-//     this.zero = res[0], this.first = res[1], this.second = res[2], this.third = res[3], this.fourth = res[4], this.fifth = res[5],
-//       this.sixth = res[6], this.seventh = res[7], this.objectCleaning()}));
-// }
