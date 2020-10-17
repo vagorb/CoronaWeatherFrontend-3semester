@@ -1,0 +1,138 @@
+.search {
+  margin-right: 30%;
+}
+
+.inputClass {
+  text-align: left;
+  width: auto;
+  margin-top: 1%;
+  margin-left: 45%;
+}
+
+.magnifyingGlass {
+  position: relative;
+  text-align: left;
+  width: 20px;
+}
+
+.magnifyingGlassImage {
+  height: 60%;
+  width: 60%;
+}
+
+.searchResultContainer {
+  float: left;
+  display: inline-block;
+  background-color: lightgoldenrodyellow;
+  margin-top: 1%;
+  height: auto;
+  width: 80%;
+  border-style: solid;
+}
+
+.resultNow {
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.resultNowButton {
+  text-align: center;
+  height: 50px;
+  width: 200px;
+}
+
+.result7DaysLater {
+  display: inline-block;
+  margin-left: 20%;
+}
+
+.result7DaysLatterButton {
+  text-align: center;
+  height: 50px;
+  width: 200px;
+}
+
+.resultCityName {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+.weatherTypeImage {
+  text-align: right;
+  float: right;
+  width: auto;
+  height: auto;
+}
+
+.weatherInfoContainer {
+  text-align: left;
+}
+
+.city {
+  /*background-color: white;*/
+  /*border-style: solid;*/
+}
+
+.Day0 {
+  margin-right: 16px;
+  display: inline-block;
+}
+
+.nextDay1 {
+  margin-left: 14.1%;
+  display: inline-block;
+}
+.nextDay2 {
+  margin-left: 14%;
+  display: inline-block;
+}
+.nextDay3 {
+  margin-left: 14%;
+  display: inline-block;
+}
+.nextDay4 {
+  display: inline-block;
+}
+.nextDay5 {
+  margin-left: 14%;
+  display: inline-block;
+}
+.nextDay6 {
+  margin-left: 14%;
+  display: inline-block;
+}
+.nextDay7 {
+  margin-left: 14%;
+  display: inline-block;
+}
+
+.mostSearchedContainer {
+  background-color: lightgoldenrodyellow;
+  border-style: solid;
+  width: 19%;
+  height: auto;
+  margin-top: 1%;
+  display: inline-block;
+  float: right;
+}
+
+.mostSearched {
+  position: center;
+  width: auto;
+  height: auto;
+}
+
+.weatherImage {
+  height: 60%;
+  width: 50%;
+}
+
+.imageContainer {
+  float: right;
+  margin-right: 2%;
+}
+
+.weatherText {
+  text-align: center;
+  margin-left: 50%;
+}

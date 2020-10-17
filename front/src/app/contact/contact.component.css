@@ -1,0 +1,33 @@
+.contactContainer {
+  background-color: lightgoldenrodyellow;
+}
+
+.contactInfo {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.contactInfoAt {
+  padding-bottom: 5%;
+}
+.contactInfoPhone {
+  padding-bottom: 5%;
+}
+
+.atSign {
+  width: 2.5%;
+  height: 2.5%;
+}
+.contactPhone {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.addressLocation {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.contactInfoAddress {
+  padding-bottom: 5%;
+}
+

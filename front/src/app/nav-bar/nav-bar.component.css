@@ -1,0 +1,21 @@
+.navBar {
+  padding: 0;
+  margin: 0;
+  background-color: red;
+  text-align: right;
+  height: 45px;
+}
+
+li {
+  display: inline;
+}
+a {
+  margin: 25px;
+  font-size: 40px;
+  text-decoration: none;
+
+}
+
+.routerOutlet {
+  text-align: center;
+}
