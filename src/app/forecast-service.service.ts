@@ -9,6 +9,7 @@ import {Forecast} from "./forecast";
 })
 export class ForecastServiceService {
 
+
   // private url: string = "http://localhost:8080/api/Forecast";
   private url: string = "/api/Forecast";
 
