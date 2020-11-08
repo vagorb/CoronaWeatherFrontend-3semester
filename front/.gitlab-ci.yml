@@ -25,4 +25,4 @@ deploy Forecast:
   script:
     - mkdir -p ~/front-deployment
     - rm -rf ~/front-deployment/*
-    - cp -r dist/angular-Forecast/. ~/front-deployment
+    - cp -r dist/. ~/front-deployment
