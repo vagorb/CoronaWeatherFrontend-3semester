@@ -9,7 +9,8 @@ import {Forecast} from "./forecast";
 })
 export class ForecastServiceService {
 
-  private url: string = "http://localhost:8080/api/Forecast";
+  // private url: string = "http://localhost:8080/api/Forecast";
+  private url: string = "/api/Forecast";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

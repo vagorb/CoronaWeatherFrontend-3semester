@@ -11,7 +11,8 @@ import {tap} from "rxjs/operators";
 export class DailyForecastService {
 
 
-  private url: string = "http://localhost:8080/api/Forecast/lat";
+  // private url: string = "http://localhost:8080/api/Forecast/lat";
+  private url: string = "/api/Forecast/lat";
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
