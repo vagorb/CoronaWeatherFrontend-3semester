@@ -1,0 +1,27 @@
+stages:
+  - build
+  - deploy
+
+build Forecast:
+  stage: build
+  image: node:12-alpine
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - dist
+  tags:
+    - Forecast
+  script:
+    - npm install
+    - npm run build
+
+deploy Forecast:
+  stage: deploy
+  tags:
+    - Forecast
+  script:
+    - mkdir -p ~/front-deployment
+    - rm -rf ~/front-deployment/*
+    - cp -r dist/angular-Forecast/. ~/front-deployment
