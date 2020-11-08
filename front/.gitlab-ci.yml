@@ -17,6 +17,7 @@ build Forecast:
     - npm install
     - npm run build
 
+
 deploy Forecast:
   stage: deploy
   tags:
