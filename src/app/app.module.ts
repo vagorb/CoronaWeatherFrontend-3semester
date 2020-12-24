@@ -8,10 +8,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {LogInComponent} from "./log-in/log-in.component";
 import {AdminComponent} from "./admin/admin.component";
 import {UserComponent} from "./user/user.component";
+import { RegisterComponent } from './register/register.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {JwtInterceptor} from "./jwt.interceptor";
 
 @NgModule({
   declarations: [
@@ -23,14 +26,18 @@ import {UserComponent} from "./user/user.component";
     HomeComponent,
     LogInComponent,
     AdminComponent,
-    UserComponent
+    UserComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

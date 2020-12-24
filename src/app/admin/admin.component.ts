@@ -38,9 +38,11 @@ export class AdminComponent implements OnInit {
   numberOf = 1;
 
   logOut() {
-    this.log = false;
-    this.router.navigate(['/log_in']);
-    this.logIn.show = true;
+    // this.log = false;
+    // this.router.navigate(['/log_in']);
+    // this.logIn.show = true;
+    // this.logIn.show = true;
+    // TODO Login class was changed and this method is not irrelevant, along
 
   }
 
