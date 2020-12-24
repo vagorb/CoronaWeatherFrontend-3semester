@@ -36,8 +36,8 @@ export class UserComponent implements OnInit {
   logOut() {
     this.log = false;
     this.router.navigate(['/log_in']);
-    this.logIn.show = true;
-
+    // this.logIn.show = true;
+    //asdasdasdasdasdasdas
   }
 
 
