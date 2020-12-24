@@ -8,6 +8,7 @@ import {AdminComponent} from "./admin/admin.component";
 import {LogInComponent} from "./log-in/log-in.component";
 import {UserComponent} from "./user/user.component";
 import {RegisterComponent} from "./register/register.component";
+// import {RegisterComponent} from "./register/register.component";
 
 const routes: Routes = [
   // create register component and make a path for it
