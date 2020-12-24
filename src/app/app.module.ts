@@ -15,6 +15,7 @@ import {UserComponent} from "./user/user.component";
 import { RegisterComponent } from './register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {JwtInterceptor} from "./jwt.interceptor";
+import {ErrorInterceptor} from "./error.interceptor";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import {JwtInterceptor} from "./jwt.interceptor";
   ],
   providers: [{
     provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true
-  }],
+  }, {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -4,6 +4,7 @@ import {UserServiceService} from "../user-service.service";
 import {AuthenticationService} from "../authentication.service";
 import {first} from "rxjs/operators";
 import {MessageService} from "../message.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-log-in',
@@ -16,11 +17,11 @@ export class LogInComponent implements OnInit {
   // log = false;
   //
   //
-  // constructor() {
-  // }
-  //
-  // ngOnInit(): void {
-  // }
+  // // constructor() {
+  // // }
+  // //
+  // // ngOnInit(): void {
+  // // }
   //
   // onClick() {
   //   this.show = false;
@@ -32,24 +33,32 @@ export class LogInComponent implements OnInit {
   //   this.show = true;
   // }
 
+  returnUrl: string;
   checkoutForm;
 
   constructor(
     private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
     private userService: UserServiceService,
     private authenticationService: AuthenticationService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private router: Router
   ) {
     this.checkoutForm = this.formBuilder.group({
       username: '',
       password: ''
     });
+    // TODO add this if we need to now allow logged in users to go into this page
+    // if (this.authenticationService.currentUserValue) {
+    //   this.router.navigate(['/']);
+    // }
 
 
   }
 
   ngOnInit() {
-    // this.items = this.cartService.getItems();
+    // not sure what this is for
+    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   onSubmit(customerData) {
