@@ -9,6 +9,7 @@ import {LogInComponent} from "./log-in/log-in.component";
 import {UserComponent} from "./user/user.component";
 import {RegisterComponent} from "./register/register.component";
 import {AuthGuard} from "./auth.guard";
+import {UserProfileComponent} from "./user-profile/user-profile.component";
 // import {RegisterComponent} from "./register/register.component";
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
     children: [{path: 'user', component: UserComponent}, {path: 'admin', component: AdminComponent}]
   },
   {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: UserProfileComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full'}
 
 ];

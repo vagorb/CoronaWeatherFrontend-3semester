@@ -6,6 +6,8 @@ import {Forecast} from "./forecast";
 import {tap} from "rxjs/operators";
 import {UserData} from "./user-data";
 import {UserDataResponse} from "./user-data-response";
+import {UserDataResponseUpdate} from "./userDataResponseUpdate";
+// import {UserDataUpdateResponse} from "./userDataUpdateResponse";
 
 @Injectable({
   providedIn: 'root'
@@ -37,6 +39,10 @@ export class UserServiceService {
 
   loginUser(userData: UserDataResponse): Observable<UserDataResponse> {
     return this.http.post<UserDataResponse>(this.url + 'login', userData, this.httpOptions);
+  }
+
+  updateUser(userData: UserDataResponseUpdate): Subscription {
+    return this.http.post<Forecast>(this.url + 'update', userData, this.httpOptions).pipe(tap()).subscribe(res => (console.log(res)));
   }
 
   // postForecast(forecast:  Forecast): Subscription {

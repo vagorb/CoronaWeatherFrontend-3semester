@@ -1,1 +1,88 @@
-<p>user-profile works!</p>
+<!--<p>user-profile works!</p>-->
+
+
+
+<div *ngIf="!showForm">
+<div class="userInfoContainer">
+  <div>
+
+    <p>Username : {{userName}}</p>
+    <p>Hometown : {{hometown}}</p>
+
+  </div>
+</div>
+
+<!-- remove this eventually -->
+<p></p>
+
+
+<button (click)="onClick()" >Update profile info</button>
+</div>
+
+<div *ngIf="showForm">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+<!--  <div class="userUpdateInfoContainer">-->
+<!--    <div>-->
+<!--      <label for="oldusername">-->
+<!--      </label>-->
+<!--      <input id="oldusername" type="hidden" value="{{userName}}}" formControlName="oldusername">-->
+<!--    </div>-->
+
+
+
+    <div>
+      <label for="oldusername">
+        Old Username
+      </label>
+      <input id="oldusername" type="text" placeholder="New name" formControlName="oldusername">
+    </div>
+
+    <div>
+      <label for="username">
+        Username
+      </label>
+      <input id="username" type="text" placeholder="{{userName}}" formControlName="username">
+    </div>
+    <div>
+      <label for="hometown">
+        Hometown
+      </label>
+      <input id="hometown" type="text" placeholder="{{hometown}}" formControlName="hometown">
+    </div>
+    <button>Update</button>
+<!--  </div>-->
+  </form>
+</div>
+
+
+
+<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">-->
+
+
+<!--  <div>-->
+<!--    <label for="username">-->
+<!--      Username-->
+<!--    </label>-->
+<!--    <input id="username" type="text" formControlName="username">-->
+<!--  </div>-->
+
+
+<!--  <div>-->
+<!--    <label for="password">-->
+<!--      Password-->
+<!--    </label>-->
+<!--    <input id="password" type="text" formControlName="password">-->
+<!--  </div>-->
+
+<!--  <button class="button" type="submit">Login</button>-->
+<!--</form>-->
+
+<!-- update -->
+<!--<div class="search">-->
+<!--  <input #myInput type="text" class="inputClass" placeholder="City">-->
+<!--  <button (click)="onClick(myInput.value)">-->
+<!--    <div class="magnifyingGlass">-->
+<!--      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
+<!--    </div>-->
+<!--  </button>-->
+<!--</div>-->

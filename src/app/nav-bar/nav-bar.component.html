@@ -5,6 +5,7 @@
   <li *ngIf="token() === null || token() === 'null'" ><a routerLink="log_in">Log In</a></li>
   <li *ngIf="token() === null || token() === 'null'"  ><a routerLink="register">Register</a></li>
   <li (click)="logOut()" *ngIf="token() != null"  ><a routerLink="">Logout</a></li>
+  <li *ngIf="token() != null"><a routerLink="profile">Profile</a></li>
 </ul>
 
 
