@@ -69,6 +69,7 @@ export class LogInComponent implements OnInit {
       .subscribe((user) => {
         console.log(user);
         this.messageService.add('login suc');
+        this.router.navigate(['home']);
       },
         error => {
         this.messageService.add('login unsuc');

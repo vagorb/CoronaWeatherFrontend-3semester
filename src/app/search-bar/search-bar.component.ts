@@ -111,7 +111,27 @@ export class SearchBarComponent implements OnInit {
     private dailyForecast: DailyForecastService
   ) { }
 
+  checkIfLoggedIn() {
+    if (localStorage.getItem('currentUser')) {
+      // console.log(localStorage.getItem('currentUser')['hometown']);
+      // console.log('WTF');
+      // var storage = localStorage.getItem('currentUser');
+      // console.log(storage);
+      // var storage2 = JSON.parse(storage)['hometown'];
+      // console.log(storage2);
+
+      var storage = JSON.parse(localStorage.getItem('currentUser'))['hometown'];
+      console.log(storage);
+      this.onClick(storage);
+    } else {
+      return false;
+    }
+
+  }
+
+
   ngOnInit() {
-    this.updateMostSearched()
+    this.checkIfLoggedIn();
+    this.updateMostSearched();
   }
 }
