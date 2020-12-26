@@ -17,6 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {JwtInterceptor} from "./jwt.interceptor";
 import {ErrorInterceptor} from "./error.interceptor";
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import {AngularMaterialModule} from "./angular-material.module";
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {AngularMaterialModule} from "./angular-material.module";
 
@@ -39,7 +41,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    // AngularMaterialModule
+    // BrowserAnimationsModule,
+    AngularMaterialModule
     // BrowserAnimationsModule
   ],
   providers: [{

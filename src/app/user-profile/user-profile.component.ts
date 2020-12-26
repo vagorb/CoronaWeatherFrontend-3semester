@@ -14,6 +14,9 @@ import {ForecastServiceService} from "../forecast-service.service";
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
+
+  admin = "ADMIN";
+  user = "USER";
   //
   // show = true;
   // log = false;
