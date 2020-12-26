@@ -17,6 +17,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {JwtInterceptor} from "./jwt.interceptor";
 import {ErrorInterceptor} from "./error.interceptor";
 import { UserProfileComponent } from './user-profile/user-profile.component';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import {AngularMaterialModule} from "./angular-material.module";
 
 @NgModule({
   declarations: [
@@ -30,13 +32,15 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     AdminComponent,
     UserComponent,
     RegisterComponent,
-    UserProfileComponent
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // AngularMaterialModule
+    // BrowserAnimationsModule
   ],
   providers: [{
     provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true

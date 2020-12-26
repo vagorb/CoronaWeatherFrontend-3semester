@@ -1,6 +1,3 @@
-<!--<p>user-profile works!</p>-->
-
-
 
 <div *ngIf="!showForm">
 <div class="userInfoContainer">
@@ -12,21 +9,15 @@
   </div>
 </div>
 
-<!-- remove this eventually -->
 <p></p>
 
 
-<button (click)="onClick()" >Update profile info</button>
+<button (click)="onClick2()" >Update profile info</button>
 </div>
 
 <div *ngIf="showForm">
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
-<!--  <div class="userUpdateInfoContainer">-->
-<!--    <div>-->
-<!--      <label for="oldusername">-->
-<!--      </label>-->
-<!--      <input id="oldusername" type="hidden" value="{{userName}}}" formControlName="oldusername">-->
-<!--    </div>-->
+
 
 
 
@@ -56,33 +47,101 @@
 
 
 
-<!--<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">-->
 
 
-<!--  <div>-->
-<!--    <label for="username">-->
-<!--      Username-->
-<!--    </label>-->
-<!--    <input id="username" type="text" formControlName="username">-->
-<!--  </div>-->
+
+<div *ngIf="role == 'USER'">
+
+  <div class="userContainer">
+    <div class="post">
+      <p>If our application is missing a city, or any info regarding a specific location, then you can add it manually by filling the necessary info about the place</p>
+    </div>
+
+    <div>
+      <button (click)="onClickUser()">Please fill the form!</button>
+    </div>
+    <div *ngIf="show">
+      <div>
+        <input #myInput1 type="text" placeholder="City">
+      </div>
+      <div>
+        <input #myInput2 type="text" placeholder="Country">
+      </div>
+      <div>
+        <input #myInput4 type="text" placeholder="Lat">
+      </div>
+      <div>
+        <input #myInput5 type="text" placeholder="Lon">
+      </div>
+      <button (click)="onFinish(myInput1.value, myInput2.value, myInput4.value, myInput5.value)">Finish</button>
+    </div>
 
 
-<!--  <div>-->
-<!--    <label for="password">-->
-<!--      Password-->
-<!--    </label>-->
-<!--    <input id="password" type="text" formControlName="password">-->
-<!--  </div>-->
+    <div *ngIf="log">
+      <button class="logOutButton" (click)="logOutUser()">Log out</button>
+    </div>
+  </div>
 
-<!--  <button class="button" type="submit">Login</button>-->
-<!--</form>-->
 
-<!-- update -->
-<!--<div class="search">-->
-<!--  <input #myInput type="text" class="inputClass" placeholder="City">-->
-<!--  <button (click)="onClick(myInput.value)">-->
-<!--    <div class="magnifyingGlass">-->
-<!--      <img src="/assets/images/magnifyingGlass.png" alt="magnifying glass image" class="magnifyingGlassImage">-->
-<!--    </div>-->
-<!--  </button>-->
-<!--</div>-->
+
+</div>
+
+<div *ngIf="role == 'ADMIN'">
+  <div class = adminContainer>
+    <div class="adminPostContainer">
+      <div class="post">
+        <p>Add missing cities to the database</p>
+      </div>
+      <div>
+        <button (click)="onClickUser()">Adding form</button>
+      </div>
+      <div *ngIf="show">
+        <div>
+          <input #myInput1 type="text" placeholder="City">
+        </div>
+        <div>
+          <input #myInput2 type="text" placeholder="Country">
+        </div>
+        <div>
+          <input #myInput4 type="text" placeholder="Lat">
+        </div>
+        <div>
+          <input #myInput5 type="text" placeholder="Lon">
+        </div>
+        <button (click)="onFinish(myInput1.value, myInput2.value,  myInput4.value, myInput5.value)">Finish</button>
+      </div>
+    </div>
+
+    <div class="adminDeleteContainer">
+
+
+      <div class="delete">
+        <p>Delete inappropriately added cities</p>
+      </div>
+
+      <div>
+        <button (click)="delete()"> Delete </button>
+      </div>
+      <div *ngIf="showDelete">
+        <div>
+          <input #deleteId type="number" placeholder="ID">
+        </div>
+        <div>
+          <button (click)="onDelete(deleteId.value)">Confirm</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div *ngIf="log">
+      <button class="logOutButton" (click)="logOutUser()">Log out</button>
+    </div>
+  </div>
+
+</div>
+
+
