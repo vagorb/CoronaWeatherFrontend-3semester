@@ -1,5 +1,5 @@
-<p>register works!</p>
 
+<div class="text-center container formColor">
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
 
@@ -7,6 +7,7 @@
   <label for="username">
     Username
   </label>
+  <br>
   <input id="username" type="text" formControlName="username">
 </div>
 
@@ -15,6 +16,7 @@
   <label for="password">
     Password
   </label>
+  <br>
   <input id="password" type="text" formControlName="password">
 </div>
 
@@ -22,8 +24,10 @@
   <label for="hometown">
     Hometown
   </label>
+  <br>
   <input id="hometown" type="text" formControlName="hometown">
 </div>
 
 <button class="button" type="submit">Register</button>
 </form>
+</div>

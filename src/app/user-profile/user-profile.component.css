@@ -1,22 +1,37 @@
 .userInfoContainer {
   display: inline-block;
   border-style: solid;
+  margin-top: 10px;
 }
 
 
-li {
-  display: inline;
-}
 
-a {
-  margin: 20%;
+.backgroundColor {
+  background-color: lightblue;
 }
 
 
-.logOutButton {
-
+.deleteContainer {
+  border-style: solid;
+  margin-top: 10px;
 }
 
-.logInContainer {
-  background-color: lightgoldenrodyellow;
+.label {
+  margin-top: 10px;
+  /*margin-bottom: 10px;*/
+}
+
+.button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inputField {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.inputFieldWidth {
+  margin-left: 5px;
+  margin-right: 5px;
 }

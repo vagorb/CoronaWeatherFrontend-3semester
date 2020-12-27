@@ -17,17 +17,7 @@ export class UserProfileComponent implements OnInit {
 
   admin = "ADMIN";
   user = "USER";
-  //
-  // show = true;
-  // log = false;
-  // onClick() {
-  //   this.show = false;
-  //   this.log = true
-  // }
-  // logOut() {
-  //   this.log = false;
-  //   this.show = true;
-  // }
+
 
 
 
@@ -145,8 +135,8 @@ export class UserProfileComponent implements OnInit {
 
   onDelete(id: string) {
     this.showDelete = false;
-    const numberId: number  = parseInt(id);
-    this.forecastService.deleteForecast(numberId).subscribe(res => {console.log(JSON.stringify(res));
+    // const numberId: number  = parseInt(id);
+    this.forecastService.deleteForecast(id).subscribe(res => {console.log(JSON.stringify(res));
     });
   }
 

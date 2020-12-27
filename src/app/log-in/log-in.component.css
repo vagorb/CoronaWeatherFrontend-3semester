@@ -1,16 +1,43 @@
-li {
-  display: inline;
+/*li {*/
+/*  display: inline;*/
+/*}*/
+
+/*a {*/
+/*  margin: 20%;*/
+/*}*/
+
+
+/*.logOutButton {*/
+
+/*}*/
+
+/*.logInContainer {*/
+/*  background-color: lightgoldenrodyellow;*/
+/*}*/
+.button {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-a {
-  margin: 20%;
+/*.container-fluid {*/
+/*  background-color: lightblue;*/
+/*  display: inline-block;*/
+/*}*/
+
+.formColor {
+    background-color: lightblue;
+    display: inline-block;
+  border-style: solid;
 }
 
-
-.logOutButton {
-
+.displayStyle {
+  /*display: inline-block;*/
 }
 
-.logInContainer {
-  background-color: lightgoldenrodyellow;
+.container {
+  /*margin-left: 30%;*/
+  /*margin-right: 30%;*/
+  text-align: center;
+  width: 50%;
+  /*height: 50%;*/
 }

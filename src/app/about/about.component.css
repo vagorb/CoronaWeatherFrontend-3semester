@@ -1,12 +1,15 @@
-.name {
-  height: 100px;
-  width: 100px;
+/*.name {*/
+/*  height: 100px;*/
+/*  width: 100px;*/
 
-}
+/*}*/
 .aboutUsContainer {
-  background-color: lightgoldenrodyellow;
+  background-color: lightblue;
+  border-style: solid;
 }
 
 p {
   font-size: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }

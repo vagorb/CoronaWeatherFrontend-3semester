@@ -1,25 +1,32 @@
-
+<!--<div class="container formColor">-->
+<div class="text-center container formColor">
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
 
-  <div>
+<!--  <div class="container-fluid" style="align-content: center">-->
+  <div class="">
     <label for="username">
       Username
     </label>
+    <br>
     <input id="username" type="text" formControlName="username">
   </div>
 
 
-  <div>
+  <div class="">
     <label for="password">
       Password
     </label>
-    <input id="password" type="text" formControlName="password">
+    <br>
+    <input id="password" type="password" formControlName="password">
   </div>
 
   <button class="button" type="submit">Login</button>
-</form>
 
+<!--  </div>-->
+</form>
+</div>
+<!--</div>-->
 
 <!--<div class="logInContainer">-->
 <!--  <div>-->

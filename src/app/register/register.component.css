@@ -1,0 +1,22 @@
+
+.formColor {
+  background-color: lightblue;
+  display: inline-block;
+  border-style: solid;
+}
+
+.displayStyle {
+  /*display: inline-block;*/
+}
+
+.container {
+  /*margin-left: 30%;*/
+  /*margin-right: 30%;*/
+  text-align: center;
+  width: 50%;
+  /*height: 50%;*/
+}
+.button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
