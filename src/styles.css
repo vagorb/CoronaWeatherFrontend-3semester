@@ -3,5 +3,13 @@
 /*html, body { height: 100%; }*/
 /*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/*html, body { height: 100%; }*/
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+@import '~bootstrap/dist/css/bootstrap.css';
+/*html, body { height: 100%; }*/
+/*body { font-size: 20px; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/
+body {
+  overflow-x: hidden;
+  /*min-width: 1000px;*/
+  min-width: 85%;
+}

@@ -18,6 +18,10 @@ import {JwtInterceptor} from "./jwt.interceptor";
 import {ErrorInterceptor} from "./error.interceptor";
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import {AngularMaterialModule} from "./angular-material.module";
+import {HeaderComponent} from "./header/header.component";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+// import {AngularMaterialModule} from "./angular-material.module";
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import {AngularMaterialModule} from "./angular-material.module";
@@ -35,14 +39,17 @@ import {AngularMaterialModule} from "./angular-material.module";
     UserComponent,
     RegisterComponent,
     UserProfileComponent,
+    HeaderComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AngularMaterialModule,
     // BrowserAnimationsModule,
-    AngularMaterialModule
+    // AngularMaterialModule
     // BrowserAnimationsModule
   ],
   providers: [{

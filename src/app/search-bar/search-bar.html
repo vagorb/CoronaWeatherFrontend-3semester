@@ -1,4 +1,6 @@
 <div class="search">
+<!--  class="form-control"-->
+<!--  <input #myInput type="text" class="inputClass" placeholder="City">-->
   <input #myInput type="text" class="inputClass" placeholder="City">
   <button (click)="onClick(myInput.value)">
     <div class="magnifyingGlass">
@@ -7,14 +9,20 @@
   </button>
 </div>
 
-<div *ngIf="show" class="searchResultContainer">
+<!--<div class="container-fluid">-->
+
+<div *ngIf="show" class="container-fluid float-left stylizing " style="width: 80%">
+<!--  <div class="container-fluid" style="display: inline-block">-->
   <div class="resultNow">
     <button (click)="showNowForecast()" class="resultNowButton">Current weather</button>
   </div>
   <div class="result7DaysLater">
     <button (click)="showWeeklyForecast()" class="result7DaysLatterButton">8 day weather forecast</button>
-
   </div>
+<!--  </div>-->
+
+<!--  <div class="container-fluid">-->
+<!--  <div class="container-fluid">-->
   <div class="resultCityName">
     <p class="city">City : {{city}}</p>
   </div>
@@ -22,44 +30,46 @@
     <div class="weatherTypeImage">
       <img src="/assets/images/{{weather}}.png" class="weatherImage" alt="weatherImage">
     </div>
-    <div class="weatherText">
+    <div class="weatherText ">
       <p>Weather : {{weather}}</p>
     </div>
   </div>
+<!--  </div>-->
+<!--  </div>-->
   <div class="weatherInfoContainer">
     <div *ngIf="showToday" class="today">
       <p>Country : {{countryName}}</p>
-      <p>Temperature : {{temperature}}</p>
-      <p>Wind : {{wind}}</p>
+      <p >Temperature : {{temperature}}</p>
+      <p >Wind : {{wind}}</p>
       <p>Pressure : {{pressure}}</p>
-      <p>Humidity : {{humidity}}</p>
+      <p >Humidity : {{humidity}}</p>
       <p>Suggestion : {{suggestion}}</p>
-      <p>Corona virus information</p>
-      <p>Total cases : {{totalCases}}</p>
-      <p>Recovered cases : {{recoveredCases}}</p>
-      <p>Total deaths : {{totalDeaths}}</p>
-      <p>Current cases : {{currentCases}}</p>
+      <p >Corona virus information</p>
+      <p >Total cases : {{totalCases}}</p>
+      <p >Recovered cases : {{recoveredCases}}</p>
+      <p >Total deaths : {{totalDeaths}}</p>
+      <p >Current cases : {{currentCases}}</p>
     </div>
 
     <div *ngIf="showWeek" class="week">
-      <div class="first4">
+      <div class="container-fluid first4">
         <div class="Day0">
-          <p>Weather today</p>
-          <p>Day : {{zero['day']}}</p>
+          <p >Weather today</p>
+          <p >Day : {{zero['day']}}</p>
           <p>Night : {{zero['night']}}</p>
           <p>Weather : {{zero['weather']}}</p>
           <p>Pressure : {{zero['pressure']}}</p>
-          <p>Humidity : {{zero['humidity']}}</p>
-          <p>Wind : {{zero['wind']}}</p>
+          <p >Humidity : {{zero['humidity']}}</p>
+          <p >Wind : {{zero['wind']}}</p>
         </div>
 
         <div class="nextDay1">
-          <p>Weather in 1 day </p>
-          <p>Day : {{first['day']}}</p>
-          <p>Night : {{first['night']}}</p>
-          <p>Weather : {{first['weather']}}</p>
-          <p>Pressure : {{first['pressure']}}</p>
-          <p>Humidity : {{first['humidity']}}</p>
+          <p >Weather in 1 day </p>
+          <p >Day : {{first['day']}}</p>
+          <p >Night : {{first['night']}}</p>
+          <p >Weather : {{first['weather']}}</p>
+          <p >Pressure : {{first['pressure']}}</p>
+          <p >Humidity : {{first['humidity']}}</p>
           <p>Wind : {{first['wind']}}</p>
         </div>
 
@@ -85,7 +95,7 @@
           <p>Wind : {{third['wind']}}</p>
         </div>
       </div>
-      <div class="last4">
+      <div class="container-fluid last4">
         <div class="nextDay4">
           <p>Weather in 4 days</p>
           <p>Day : {{fourth['day']}}</p>
@@ -129,26 +139,27 @@
     </div>
   </div>
 </div>
-<div class="mostSearchedContainer">
-  <div class="mostSearched">
+<div class="container-fluid topFiveStylizing float-right stylizing">
+  <div class="container-fluid">
     <p>Most searched cities</p>
-    <span *ngIf="topOne!=undefined" class="topCities">
-  <p>1 {{topOne}}</p>
-    </span>
-    <span *ngIf="topTwo!=undefined" class="topCities">
-  <p>2 {{topTwo}}</p>
-    </span>
-    <span *ngIf="topThree!=undefined" class="topCities">
-  <p>3 {{topThree}}</p>
-    </span>
-    <span *ngIf="topFour!=undefined" class="topCities">
-  <p>4 {{topFour}}</p>
-    </span>
-    <span *ngIf="topFive!=undefined" class="topCities">
-  <p>5 {{topFive}}</p>
-    </span>
+    <p *ngIf="topOne!=undefined" class="topCities">
+  1 {{topOne}}
+    </p>
+    <p *ngIf="topTwo!=undefined" class="topCities">
+  2 {{topTwo}}
+    </p>
+    <p *ngIf="topThree!=undefined" class="topCities">
+  3 {{topThree}}
+    </p>
+    <p *ngIf="topFour!=undefined" class="topCities">
+  4 {{topFour}}
+    </p>
+    <p *ngIf="topFive!=undefined" class="topCities">
+  5 {{topFive}}
+    </p>
   </div>
 </div>
+<!--</div>-->
 <!--<div>-->
 <!--  <div>-->
 <!--    <p>Hometown info</p>-->

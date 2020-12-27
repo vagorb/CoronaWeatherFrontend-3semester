@@ -1,5 +1,6 @@
 .search {
   margin-right: 30%;
+  margin-bottom: 1%;
 }
 
 .inputClass {
@@ -13,20 +14,54 @@
   position: relative;
   text-align: left;
   width: 20px;
+  /*height: 22px;*/
+  /*display: inline-block;*/
+}
+
+.form-control {
+  display: inline-block;
+  height: 3%;
+  width: 50%;
 }
 
 .magnifyingGlassImage {
-  height: 60%;
-  width: 60%;
+  height: 75%;
+  width: 75%;
 }
 
-.searchResultContainer {
-  float: left;
-  display: inline-block;
-  background-color: lightgoldenrodyellow;
-  margin-top: 1%;
-  height: auto;
-  width: 80%;
+.btn {
+  width: 5%;
+  height: 39px;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundColor {
+  background-color: lightblue;
+}
+
+.container {
+  height: 200%;
+  width: 200%;
+}
+
+.marginPadding {
+  margin: 1%;
+}
+
+
+/*.searchResultContainer {*/
+/*  float: left;*/
+/*  display: inline-block;*/
+/*  background-color: lightgoldenrodyellow;*/
+/*  margin-top: 1%;*/
+/*  height: auto;*/
+/*  width: 80%;*/
+/*  border-style: solid;*/
+/*}*/
+
+.stylizing {
+  background-color: lightblue;
   border-style: solid;
 }
 
@@ -60,50 +95,116 @@
 .weatherTypeImage {
   text-align: right;
   float: right;
-  width: auto;
-  height: auto;
+  /*width: auto;*/
+  /*height: auto;*/
+  /*display: inline-block;*/
 }
 
 .weatherInfoContainer {
   text-align: left;
 }
 
-.city {
-  /*background-color: white;*/
-  /*border-style: solid;*/
-}
 
 .Day0 {
-  margin-right: 16px;
+  /*margin-right: 16px;*/
+  width: 18%;
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+  /*width: 10%;*/
+
 }
 
 .nextDay1 {
-  margin-left: 14.1%;
+  /*margin-left: 14.1%;*/
+  width: 18%;
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay2 {
-  margin-left: 14%;
+  /*margin-left: 14%;*/
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay3 {
-  margin-left: 14%;
+  /*margin-left: 14%;*/
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay4 {
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay5 {
-  margin-left: 14%;
+  /*margin-left: 14%;*/
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay6 {
-  margin-left: 14%;
+  /*margin-left: 14%;*/
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 .nextDay7 {
-  margin-left: 14%;
+  /*margin-left: 14%;*/
+  width: 18%;
+
   display: inline-block;
+  border-style: solid;
+  text-align: center;
+  margin: 0.25%;
+  min-width: 100px;
+
+
+
 }
 
 .mostSearchedContainer {
@@ -111,9 +212,20 @@
   border-style: solid;
   width: 19%;
   height: auto;
-  margin-top: 1%;
+  /*margin-top: 1%;*/
   display: inline-block;
   float: right;
+}
+
+.topFiveStylizing {
+  background-color: lightblue;
+  border-style: solid;
+  width: 19%;
+  display: inline-block;
+  float: right;
+  min-width: 50px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .mostSearched {
@@ -130,6 +242,7 @@
 .imageContainer {
   float: right;
   margin-right: 2%;
+  /*margin-bottom: 10%;*/
 }
 
 .weatherText {
