@@ -56,6 +56,7 @@ export class NavBarComponent implements OnInit {
   logOut() {
     localStorage.clear();
     this.tokenHolder = null;
+    location.reload();
   }
 
   ngOnInit(): void {
