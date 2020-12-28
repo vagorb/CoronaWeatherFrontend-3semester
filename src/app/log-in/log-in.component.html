@@ -1,11 +1,29 @@
-<div class="logInContainer">
-  <div>
-    <ul *ngIf="show">
-      <li><a (click)="onClick()" routerLink="user">Log in as a User</a></li>
-      <li><a (click)="onClick()" routerLink="admin">Log in as a Admin</a></li>
-    </ul>
+<!--<div class="container formColor">-->
+<div class="text-center container formColor">
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+
+
+  <div class="">
+    <label for="username">
+      Username
+    </label>
+    <br>
+    <input id="username" type="text" formControlName="username">
   </div>
-  <div class="routerOutlet">
-    <router-outlet></router-outlet>
+
+
+  <div class="">
+    <label for="password">
+      Password
+    </label>
+    <br>
+    <input id="password" type="password" formControlName="password">
   </div>
+
+  <button class="button" type="submit">Login</button>
+
+<!--  </div>-->
+</form>
 </div>
+

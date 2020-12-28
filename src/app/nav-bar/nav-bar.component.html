@@ -1,12 +1,22 @@
-<ul >
-  <li><a routerLink="home">Home test</a></li>
-  <li><a routerLink="about">About us</a></li>
-  <li><a routerLink="contact">Contact</a></li>
-  <li><a routerLink="log_in">Log In</a></li>
 
-</ul>
+
+<nav class="navbar navbar-light bg-light">
+  <div class="container" style="width: 25%; height: 25%; margin: 0; overflow: hidden">
+<!--  <a class="navbar-brand float-left" href="#" style="display: inline-block">-->
+    <img src="/assets/images/CWLogo.png" class="logo" alt="logo" style="min-width: 100px">
+<!--  </a>-->
+  </div>
+  <a class="nav-item float-right" routerLink="home">Home</a>
+  <a class="nav-item float-right" routerLink="about">About us</a>
+  <a class="nav-item float-right" routerLink="contact">Contact</a>
+  <a class="nav-item float-right" *ngIf="token() === null || token() === 'null'" routerLink="log_in">Log In</a>
+  <a class="nav-item float-right" *ngIf="token() === null || token() === 'null'" routerLink="register">Register</a>
+  <a class="nav-item float-right" (click)="logOut()" *ngIf="token() != null"  routerLink="">Logout</a>
+  <a class="nav-item float-right" *ngIf="token() != null" routerLink="profile">Profile</a>
+</nav>
 
 
 <div class="routerOutlet">
 <router-outlet></router-outlet>
 </div>
+

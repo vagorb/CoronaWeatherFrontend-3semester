@@ -1,5 +1,6 @@
 .contactContainer {
-  background-color: lightgoldenrodyellow;
+  background-color: lightblue;
+  border-style: solid;
 }
 
 .contactInfo {
@@ -31,3 +32,6 @@
   padding-bottom: 5%;
 }
 
+p {
+  font-size: 20px;
+}

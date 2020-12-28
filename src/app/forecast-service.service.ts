@@ -26,7 +26,7 @@ export class ForecastServiceService {
   }
 
   getTopSearches(): Observable<Forecast> {
-    console.log('SENT');
+
     return this.http.get<Forecast>(this.url).pipe(tap(_ => this.log(`fetched forecast top results`)))
   }
 
@@ -34,7 +34,7 @@ export class ForecastServiceService {
     return this.http.post<Forecast>(this.url, forecast, this.httpOptions).pipe(tap(_ => this.log(`adding new forecast`))).subscribe(res => (console.log(res)))
   }
 
-  deleteForecast(id: number): Observable<Forecast> {
+  deleteForecast(id: string): Observable<Forecast> {
     const otherUrl = `${this.url}/${id}`;
     return this.http.delete<Forecast>(otherUrl).pipe(tap(_ => this.log(`delete forecast`)))
   }

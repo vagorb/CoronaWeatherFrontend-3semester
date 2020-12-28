@@ -1,0 +1,157 @@
+<div class="container backgroundColor">
+<div class="" *ngIf="!showForm">
+<div class="userInfoContainer ">
+  <div>
+
+    <p style="margin-top: 10px; margin-right: 5px; margin-left: 5px">Username : {{userName}}</p>
+    <p style="margin-right: 5px; margin-left: 5px">Hometown : {{hometown}}</p>
+
+  </div>
+</div>
+
+<p></p>
+
+
+<button (click)="onClick2()" >Update profile info</button>
+</div>
+
+<div *ngIf="showForm">
+  <div class=" userInfoContainer">
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+
+
+
+<!--    <div>-->
+<!--&lt;!&ndash;      <label class="label" for="oldusername">&ndash;&gt;-->
+<!--&lt;!&ndash;        Old Username&ndash;&gt;-->
+<!--&lt;!&ndash;      </label>&ndash;&gt;-->
+<!--&lt;!&ndash;      <br>&ndash;&gt;-->
+<!--      <input class="inputFieldWidth" id="oldusername" type="hidden" value="{{userName}}" formControlName="oldusername">-->
+<!--    </div>-->
+
+    <div>
+      <label class="label" for="username">
+        Username
+      </label>
+      <br>
+      <input class="inputFieldWidth" id="username" type="text" placeholder="new username" formControlName="username">
+    </div>
+    <div>
+      <label class="label" for="hometown">
+        Hometown
+      </label>
+      <br>
+      <input class="inputFieldWidth" id="hometown" type="text" placeholder="{{hometown}}" formControlName="hometown">
+    </div>
+    <button class="button" >Update</button>
+<!--  </div>-->
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+<div *ngIf="role == user">
+
+<!--  <div>-->
+  <div class="userInfoContainer" style="margin-bottom: 10px">
+    <div class="post">
+      <p style="margin-top: 10px; margin-left: 5px; margin-right: 5px" >Add missing cities to the database</p>
+    </div>
+
+    <div>
+      <button *ngIf="!show" class="button" (click)="onClickUser()">Please fill the form!</button>
+    </div>
+    <div *ngIf="show">
+      <div>
+        <input class="inputField" #myInput1 type="text" placeholder="City">
+      </div>
+      <div>
+        <input class="inputField" #myInput2 type="text" placeholder="Country">
+      </div>
+      <div>
+        <input class="inputField" #myInput4 type="text" placeholder="Lat">
+      </div>
+      <div>
+        <input class="inputField" #myInput5 type="text" placeholder="Lon">
+      </div>
+      <button  class="button" (click)="onFinish(myInput1.value, myInput2.value, myInput4.value, myInput5.value)">Finish</button>
+    </div>
+
+
+    <div *ngIf="log">
+      <button class="button" (click)="logOutUser()">Log out</button>
+    </div>
+  </div>
+<!--  </div>-->
+
+
+
+</div>
+
+<div *ngIf="role == admin">
+  <div class = adminContainer>
+    <div class="userInfoContainer">
+      <div class="post">
+        <p style="margin-top: 10px; margin-left: 5px; margin-right: 5px">Add missing cities to the database</p>
+      </div>
+      <div>
+        <button *ngIf="!show"  class="button" (click)="onClickUser()">Adding form</button>
+      </div>
+      <div *ngIf="show">
+        <div>
+          <input class="inputField" #myInput1 type="text" placeholder="City">
+        </div>
+        <div>
+          <input class="inputField" #myInput2 type="text" placeholder="Country">
+        </div>
+        <div>
+          <input class="inputField" #myInput4 type="text" placeholder="Lat">
+        </div>
+        <div>
+          <input class="inputField" #myInput5 type="text" placeholder="Lon">
+        </div>
+        <button  class="button" (click)="onFinish(myInput1.value, myInput2.value,  myInput4.value, myInput5.value)">Finish</button>
+      </div>
+    </div>
+
+    <div>
+    <div class="userInfoContainer" style="margin-bottom: 10px">
+
+
+      <div class="delete">
+        <p style="margin-top: 10px; margin-left: 5px; margin-right: 5px" >Delete inappropriately added cities</p>
+      </div>
+
+      <div>
+        <button *ngIf="!showDelete" class="button" (click)="delete()"> Delete </button>
+      </div>
+      <div *ngIf="showDelete">
+        <div>
+          <input #deleteId type="text" placeholder="City">
+        </div>
+        <div>
+          <button  class="button" (click)="onDelete(deleteId.value)">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+
+
+
+    <div *ngIf="log">
+      <button  class="button" (click)="logOutUser()">Log out</button>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
