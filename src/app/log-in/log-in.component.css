@@ -1,28 +1,10 @@
-/*li {*/
-/*  display: inline;*/
-/*}*/
 
-/*a {*/
-/*  margin: 20%;*/
-/*}*/
-
-
-/*.logOutButton {*/
-
-/*}*/
-
-/*.logInContainer {*/
-/*  background-color: lightgoldenrodyellow;*/
-/*}*/
 .button {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/*.container-fluid {*/
-/*  background-color: lightblue;*/
-/*  display: inline-block;*/
-/*}*/
+
 
 .formColor {
     background-color: lightblue;
@@ -35,8 +17,7 @@
 }
 
 .container {
-  /*margin-left: 30%;*/
-  /*margin-right: 30%;*/
+
   text-align: center;
   width: 50%;
   /*height: 50%;*/

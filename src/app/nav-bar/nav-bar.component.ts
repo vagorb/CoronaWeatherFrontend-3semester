@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LogInComponent} from "../log-in/log-in.component";
 import {AuthenticationService} from "../authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,7 +11,8 @@ import {AuthenticationService} from "../authentication.service";
 export class NavBarComponent implements OnInit {
 
   constructor(
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private router: Router
   ) {}
 
   private tokenHolder;
@@ -25,38 +27,13 @@ export class NavBarComponent implements OnInit {
     } else {
       return this.tokenHolder;
     }
-    // this.tokenHolder = this.authenticationService.currentUser['source']; //['value']['token']
-    // // console.log(JSON.stringify(this.tokenHolder));
-    // console.log(this.tokenHolder);
-    //
-    // if (this.tokenHolder !== null) {
-    //   this.tokenHolder = this.authenticationService.currentUser['source']['value'];
-    // }
-    // // console.log(JSON.stringify(this.tokenHolder));
-    // console.log(this.tokenHolder);
-    //
-    // if (this.tokenHolder !== null) {
-    //   this.tokenHolder = this.authenticationService.currentUser['source']['value']['token'];
-    // }
-    // // console.log(JSON.stringify(this.tokenHolder));
-    // console.log(this.tokenHolder);
-    //
-    // if (this.tokenHolder === undefined) {
-    //   this.tokenHolder = null;
-    // }
-    //
-    // if (this.tokenHolder == 'null') {
-    //   this.tokenHolder = null;
-    // }
-    // // console.log(JSON.stringify(this.tokenHolder));
-    // console.log(this.tokenHolder);
-    // return this.tokenHolder;
+
   }
 
   logOut() {
     localStorage.clear();
     this.tokenHolder = null;
-    location.reload();
+    this.router.navigate(['home']).then(() => location.reload());
   }
 
   ngOnInit(): void {

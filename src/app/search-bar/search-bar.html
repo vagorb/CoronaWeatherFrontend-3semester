@@ -1,6 +1,5 @@
 <div class="search">
-<!--  class="form-control"-->
-<!--  <input #myInput type="text" class="inputClass" placeholder="City">-->
+
   <input #myInput type="text" class="inputClass" placeholder="City">
   <button (click)="onClick(myInput.value)">
     <div class="magnifyingGlass">
@@ -9,20 +8,17 @@
   </button>
 </div>
 
-<!--<div class="container-fluid">-->
+
 
 <div *ngIf="show" class="container-fluid float-left stylizing " style="width: 80%">
-<!--  <div class="container-fluid" style="display: inline-block">-->
+
   <div class="resultNow">
     <button (click)="showNowForecast()" class="resultNowButton">Current weather</button>
   </div>
   <div class="result7DaysLater">
     <button (click)="showWeeklyForecast()" class="result7DaysLatterButton">8 day weather forecast</button>
   </div>
-<!--  </div>-->
 
-<!--  <div class="container-fluid">-->
-<!--  <div class="container-fluid">-->
   <div class="resultCityName">
     <p class="city">City : {{city}}</p>
   </div>
@@ -35,8 +31,7 @@
       <p>Weather : {{weather}}</p>
     </div>
   </div>
-<!--  </div>-->
-<!--  </div>-->
+
   <div class="weatherInfoContainer">
     <div *ngIf="showToday" class="today">
       <p *ngIf="countryName != ''" >Country : {{countryName}}</p>
@@ -56,7 +51,7 @@
       <p >Total cases : {{totalCases}}</p>
       <p >Recovered cases : {{recoveredCases}}</p>
       <p >Total deaths : {{totalDeaths}}</p>
-      <p >Current cases : {{currentCases}}</p>
+      <p >New daily cases : {{currentCases}}</p>
     </div>
 
     <div *ngIf="showWeek" class="week">
@@ -167,11 +162,6 @@
     </p>
   </div>
 </div>
-<!--</div>-->
-<!--<div>-->
-<!--  <div>-->
-<!--    <p>Hometown info</p>-->
-<!--  </div>-->
-<!--</div>-->
+
 
 

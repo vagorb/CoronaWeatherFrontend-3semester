@@ -12,26 +12,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  //
-  // show = true;
-  // log = false;
-  //
-  //
-  // // constructor() {
-  // // }
-  // //
-  // // ngOnInit(): void {
-  // // }
-  //
-  // onClick() {
-  //   this.show = false;
-  //   this.log = true
-  // }
-  //
-  // logOut() {
-  //   this.log = false;
-  //   this.show = true;
-  // }
+
 
   returnUrl: string;
   checkoutForm;
@@ -48,7 +29,7 @@ export class LogInComponent implements OnInit {
       username: '',
       password: ''
     });
-    // TODO add this if we need to now allow logged in users to go into this page
+
     // if (this.authenticationService.currentUserValue) {
     //   this.router.navigate(['/']);
     // }
@@ -57,17 +38,16 @@ export class LogInComponent implements OnInit {
   }
 
   ngOnInit() {
-    // not sure what this is for
-    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+
   }
 
   onSubmit(customerData) {
-    console.log(customerData);
+
     // console.log(this.userService.registerUser(customerData));
     // this.userService.loginUser(customerData);
     this.authenticationService.login(customerData).pipe(first())
       .subscribe((user) => {
-        console.log(user);
+       // console.log(user);
         this.messageService.add('login suc');
         this.router.navigate(['home']);
       },

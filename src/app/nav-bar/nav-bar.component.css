@@ -18,13 +18,13 @@ a {
 .logo {
   display: inline-block;
   width: 30%;
-  /*height: 100%;*/
+
   float: left;
 }
 
 .navBarLink {
   float: right;
-  /*margin: 20px;*/
+
 
 }
 

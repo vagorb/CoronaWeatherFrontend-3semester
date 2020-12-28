@@ -56,13 +56,7 @@ export class UserProfileComponent implements OnInit {
 
 
   onSubmit(customerData) {
-    // console.log(customerData);
-    // // console.log(this.userService.registerUser(customerData));
-    // this.userService.registerUser(customerData);
-    // this.router.navigate(['log_in']);
-    //
-    // this.checkoutForm.reset();
-    // console.log(this.userService.updateUser(customerData));
+
     var response = this.userService.updateUser(customerData);
 
     this.checkoutForm.reset();

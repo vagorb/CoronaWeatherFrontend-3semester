@@ -27,10 +27,7 @@ export class UserServiceService {
   constructor(private http: HttpClient, private messageService: MessageService ) { }
 
 
-  // getForecast(cityName: string): Observable<Forecast> {
-  //   const otherUrl = `${this.url}/city/${cityName}`;
-  //   return this.http.get<Forecast>(otherUrl).pipe(tap(_ => this.log(`fetched forecast id=${cityName}`)))
-  // }
+
 
   registerUser(userData : UserData): Subscription {
     // const otherUrl = `${this.url}register`;
@@ -45,9 +42,7 @@ export class UserServiceService {
     return this.http.post<Forecast>(this.url + 'update', userData, this.httpOptions).pipe(tap()).subscribe(res => (console.log(res)));
   }
 
-  // postForecast(forecast:  Forecast): Subscription {
-  //   return this.http.post<Forecast>(this.url, forecast, this.httpOptions).pipe(tap(_ => this.log(`adding new forecast`))).subscribe(res => (console.log(res)))
-  // }
+
 
 
 }

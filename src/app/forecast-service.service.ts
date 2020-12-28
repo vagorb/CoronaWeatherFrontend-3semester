@@ -26,7 +26,7 @@ export class ForecastServiceService {
   }
 
   getTopSearches(): Observable<Forecast> {
-    console.log('SENT');
+
     return this.http.get<Forecast>(this.url).pipe(tap(_ => this.log(`fetched forecast top results`)))
   }
 

@@ -21,10 +21,7 @@ import {AngularMaterialModule} from "./angular-material.module";
 import {HeaderComponent} from "./header/header.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
-// import {AngularMaterialModule} from "./angular-material.module";
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import {AngularMaterialModule} from "./angular-material.module";
+
 
 @NgModule({
   declarations: [
@@ -48,9 +45,7 @@ import {MatIconModule} from "@angular/material/icon";
     HttpClientModule,
     ReactiveFormsModule,
     AngularMaterialModule,
-    // BrowserAnimationsModule,
-    // AngularMaterialModule
-    // BrowserAnimationsModule
+
   ],
   providers: [{
     provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true

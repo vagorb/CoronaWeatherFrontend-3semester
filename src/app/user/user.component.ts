@@ -15,46 +15,8 @@ export class UserComponent implements OnInit {
   constructor(private forecastService: ForecastServiceService,
               private router: Router,
               private logIn: LogInComponent) { }
-//   forecast: Forecast = {
-//     'countryName' : '',
-//     'city' : '',
-//     'weather' : '',
-//     'temperature': '',
-//     'lon': '',
-//     'lat': '',
-//     'wind': '',
-//     'pressure': '',
-//     'humidity': '',
-//     'id': null,
-//     'numOfSearches': 1,
-//     'suggestion': '',
-//     'upToDate': null
-//
-// };
-//   numberOf = 1;
-//
-//   logOut() {
-//     this.log = false;
-//     this.router.navigate(['/profile']);
-//     // this.logIn.show = true;
-//     //asdasdasdasdasdasdas
-//   }
-//
-//
+
   ngOnInit(): void {
   }
-//
-//   onClick() {
-//     this.showForm = true;
-//   }
-//
-//   onFinish(city: string, country: string, lat: string, lon: string) {
-//     this.showForm = false;
-//     this.forecast.city = city;
-//     this.forecast.countryName = country;
-//     this.forecast.lat = lat;
-//     this.forecast.lon = lon;
-//     this.forecast.numOfSearches = this.numberOf;
-//     this.forecastService.postForecast(this.forecast);
-//   }
+
 }

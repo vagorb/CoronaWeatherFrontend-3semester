@@ -14,8 +14,7 @@
   position: relative;
   text-align: left;
   width: 20px;
-  /*height: 22px;*/
-  /*display: inline-block;*/
+
 }
 
 .form-control {
@@ -95,9 +94,7 @@
 .weatherTypeImage {
   text-align: right;
   float: right;
-  /*width: auto;*/
-  /*height: auto;*/
-  /*display: inline-block;*/
+
 }
 
 .weatherInfoContainer {
@@ -106,19 +103,19 @@
 
 
 .Day0 {
-  /*margin-right: 16px;*/
+
   width: 18%;
   display: inline-block;
   border-style: solid;
   text-align: center;
   margin: 0.25%;
   min-width: 100px;
-  /*width: 10%;*/
+
 
 }
 
 .nextDay1 {
-  /*margin-left: 14.1%;*/
+
   width: 18%;
   display: inline-block;
   border-style: solid;
@@ -130,7 +127,7 @@
 
 }
 .nextDay2 {
-  /*margin-left: 14%;*/
+
   width: 18%;
 
   display: inline-block;
@@ -143,7 +140,7 @@
 
 }
 .nextDay3 {
-  /*margin-left: 14%;*/
+
   width: 18%;
 
   display: inline-block;
@@ -168,7 +165,7 @@
 
 }
 .nextDay5 {
-  /*margin-left: 14%;*/
+
   width: 18%;
 
   display: inline-block;
@@ -194,7 +191,7 @@
 
 }
 .nextDay7 {
-  /*margin-left: 14%;*/
+
   width: 18%;
 
   display: inline-block;
@@ -212,7 +209,7 @@
   border-style: solid;
   width: 19%;
   height: auto;
-  /*margin-top: 1%;*/
+
   display: inline-block;
   float: right;
 }
@@ -242,7 +239,7 @@
 .imageContainer {
   float: right;
   margin-right: 2%;
-  /*margin-bottom: 10%;*/
+
 }
 
 .weatherText {
