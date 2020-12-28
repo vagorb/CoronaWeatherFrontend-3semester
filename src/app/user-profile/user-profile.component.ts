@@ -28,8 +28,10 @@ export class UserProfileComponent implements OnInit {
     private userService: UserServiceService,
     private forecastService: ForecastServiceService,
     private router: Router
-  ) {    this.checkoutForm = this.formBuilder.group({
-    oldusername: '',
+  ) {
+    this.define();
+    this.checkoutForm = this.formBuilder.group({
+    oldusername: this.userName,
     username: '',
     hometown: ''
   })}

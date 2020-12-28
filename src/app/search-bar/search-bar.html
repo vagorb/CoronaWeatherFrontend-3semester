@@ -28,7 +28,8 @@
   </div>
   <div class="imageContainer">
     <div class="weatherTypeImage">
-      <img src="/assets/images/{{weather}}.png" class="weatherImage" alt="weatherImage">
+      <img *ngIf="weather != ''" src="/assets/images/{{weather}}.png" class="weatherImage" alt="weatherImage">
+      <img *ngIf="weather == ''" src="/assets/images/unavailable.png" class="weatherImage" alt="weatherImage">
     </div>
     <div class="weatherText ">
       <p>Weather : {{weather}}</p>
@@ -38,12 +39,19 @@
 <!--  </div>-->
   <div class="weatherInfoContainer">
     <div *ngIf="showToday" class="today">
-      <p>Country : {{countryName}}</p>
-      <p >Temperature : {{temperature}}</p>
-      <p >Wind : {{wind}}</p>
-      <p>Pressure : {{pressure}}</p>
-      <p >Humidity : {{humidity}}</p>
-      <p>Suggestion : {{suggestion}}</p>
+      <p *ngIf="countryName != ''" >Country : {{countryName}}</p>
+      <p *ngIf="temperature != ''" >Temperature : {{temperature}}</p>
+      <p *ngIf="wind != ''" >Wind : {{wind}}</p>
+      <p *ngIf="pressure != ''" >Pressure : {{pressure}}</p>
+      <p *ngIf="humidity != ''" >Humidity : {{humidity}}</p>
+      <p *ngIf="suggestion != ''" >Suggestion : {{suggestion}}</p>
+
+      <p *ngIf="countryName == ''" >Country : {{countryName}}</p>
+      <p *ngIf="temperature == ''" >Temperature : Unavailable</p>
+      <p *ngIf="wind == ''" >Wind : Unavailable</p>
+      <p *ngIf="pressure == ''" >Pressure : Unavailable</p>
+      <p *ngIf="humidity == ''" >Humidity : Unavailable</p>
+      <p *ngIf="suggestion == ''" >Suggestion : Unavailable</p>
       <p >Corona virus information</p>
       <p >Total cases : {{totalCases}}</p>
       <p >Recovered cases : {{recoveredCases}}</p>
