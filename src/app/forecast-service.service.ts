@@ -21,7 +21,7 @@ export class ForecastServiceService {
 
 
   getForecast(cityName: string): Observable<Forecast> {
-    const otherUrl = `${this.url}/city/${cityName}`;
+    const otherUrl = `${this.url}/city?city=${cityName}`;
     return this.http.get<Forecast>(otherUrl).pipe(tap(_ => this.log(`fetched forecast id=${cityName}`)))
   }
 
