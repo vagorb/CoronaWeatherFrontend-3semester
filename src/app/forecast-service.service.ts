@@ -21,7 +21,7 @@ export class ForecastServiceService {
 
 
   getForecast(cityName: string): Observable<Forecast> {
-    const otherUrl = `${this.url}/city/${cityName}`;
+    const otherUrl = `${this.url}/city?city=${cityName}`;
     return this.http.get<Forecast>(otherUrl).pipe(tap(_ => this.log(`fetched forecast id=${cityName}`)))
   }
 
@@ -34,6 +34,7 @@ export class ForecastServiceService {
     return this.http.post<Forecast>(this.url, forecast, this.httpOptions).pipe(tap(_ => this.log(`adding new forecast`))).subscribe(res => (console.log(res)))
   }
 
+  
   deleteForecast(id: string): Observable<Forecast> {
     const otherUrl = `${this.url}/${id}`;
     return this.http.delete<Forecast>(otherUrl).pipe(tap(_ => this.log(`delete forecast`)))
