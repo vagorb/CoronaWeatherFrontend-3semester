@@ -1,4 +1,4 @@
-## Project was made by Vassili Gorbachev and Dmitri Voronoi
+## Project was made by Vassili Gorbatsov and Dmitri Voronoi
 
 All info about this project is available in backend https://gitlab.cs.ttu.ee/vagorb/iti0203-2020-backend
 
