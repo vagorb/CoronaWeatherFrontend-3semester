@@ -1,3 +1,7 @@
+## Project was made by Vassili Gorbachev and Dmitri Voronoi
+
+All info about this project is available in backend https://gitlab.cs.ttu.ee/vagorb/iti0203-2020-backend
+
 # Front
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
